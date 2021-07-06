@@ -1,4 +1,5 @@
 import React from 'react'
+import {Switch, Route, Link} from 'react-router-dom'
 class CategoriesNav extends React.Component{
 
     componentDidMount(){
@@ -9,8 +10,8 @@ class CategoriesNav extends React.Component{
         return(
             <div className="categories-nav">
                 <button>Category</button>
-                <button>Sign Up</button>
-                <button>Log In</button>
+                <Link to="/signup">Sign Up</Link>
+                <Link to="/login">Log In</Link>
             </div>
         )
     }
