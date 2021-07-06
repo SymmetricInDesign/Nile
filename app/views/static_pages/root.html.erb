@@ -1,4 +1,9 @@
 <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-replace-svg="nest"></script>
+<script type="text/javascript">
+  window.logoImgURL = "<%= image_url('nile.jpg') %>";
+  window.cartImgURL = "<%= image_url('cart.jpg') %>";
+</script>
+
 <% if logged_in? %>
   <script type="text/javascript">
     window.currentUser = <%= render(

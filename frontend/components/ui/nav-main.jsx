@@ -11,7 +11,7 @@ class NavMain extends React.Component{
         return(
                 <div className="nav-main">
                     <div id="logo">
-                        <Link className="nav-main-item" to="/"><img src="/assets/nile.jpg" alt=""/></Link>
+                        <Link className="nav-main-item" to="/"><img src={window.logoImgURL} alt="logo"/></Link>
                     </div>
                     <div className="search">
                         <div className="search-categories-container"></div>
@@ -26,7 +26,7 @@ class NavMain extends React.Component{
                                 <p>Logout</p>
                             </div>
                             <Link to="/cart" className="nav-main-item">
-                                <img id="cart-img" src="/assets/cart.jpg" alt="" />
+                                <img id="cart-img" src={window.cartImgURL} alt="cart" />
                             </Link>
                         </div>
                     :
