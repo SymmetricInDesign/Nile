@@ -3,7 +3,7 @@ import {AuthRoute} from "../util/route_util"
 import ProductIndexContainer from './products/product_index_container';
 import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container"
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, withRouter} from 'react-router-dom'
 import NavBarContainer from './ui/nav_bar_container';
 
 const App = () => (
@@ -20,4 +20,4 @@ const App = () => (
   </div>
 );
 
-export default App
+export default withRouter(App)

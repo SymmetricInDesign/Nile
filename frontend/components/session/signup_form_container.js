@@ -1,5 +1,6 @@
 import {connect} from 'react-redux'
 import { createNewUser } from '../../actions/session_actions'
+import { withRouter } from "react-router"
 import SessionForm from './session_form'
 
 const mSTP = (state, ownProps) => {
@@ -15,4 +16,4 @@ const mDTP = (dispatch, ownProps) => {
     }}
 }
 
-export default connect(mSTP, mDTP)(SessionForm)
+export default withRouter(connect(mSTP, mDTP)(SessionForm))

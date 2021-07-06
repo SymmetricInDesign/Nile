@@ -9,7 +9,7 @@ export default (state = _nullSession, action) => {
     // debugger
     switch(action.type){
         case RECEIVE_CURRENT_USER:
-            debugger
+            // debugger
             const newState =  Object.assign({}, {id: action.user.id})
             return newState
         case LOGOUT_CURRENT_USER:

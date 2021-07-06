@@ -2,7 +2,7 @@ import * as ProductApiUtil from "../util/product_api_util"
 export const RECEIVE_PRODUCTS = "RECEIVE_PRODUCTS"
 
 export const receiveProducts = (products) => {
-    debugger
+    // debugger
     return {
         type: RECEIVE_PRODUCTS,
         products

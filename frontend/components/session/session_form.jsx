@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import { withRouter } from "react-router"
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -19,7 +20,8 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user)
+        
     }
 
     updatePassword(e){
@@ -37,19 +39,19 @@ class SessionForm extends React.Component {
     render(){
         const errorLis = this.props.errors.map(error=>(<li>{error}</li>))
         return (
-            <>
+            <div className="session-form-container">
                 <ul>{errorLis}</ul>
                 { this.props.formType === "signup" ? 
                     <div className="auth-header">
                         <h2>Sign Up</h2><Link to="/login">Log In</Link>
                     </div> 
                     : 
-                    <div>
+                    <div className="auth-header">
                         <h2>Log In</h2><Link to="/signup">Sign Up</Link>
                     </div>
                 }
 
-                <form className="auth-form">
+                <form className="session-form">
                     <label className="auth-label">Username: 
                         <input className="auth-input" type="text" value={this.state.username} onChange={this.updateUsername}/>
                     </label>
@@ -61,7 +63,7 @@ class SessionForm extends React.Component {
                     </label >
                     <button className="form-button" onClick={this.handleSubmit}>{this.props.formType === "signup" ? "Sign Up" : "Log In"}</button>
                 </form>
-            </>
+            </div>
         )
     }
 
@@ -69,4 +71,4 @@ class SessionForm extends React.Component {
     //...
 }
 
-export default SessionForm
+export default withRouter(SessionForm)

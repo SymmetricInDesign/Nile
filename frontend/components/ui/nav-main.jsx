@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+import { withRouter } from "react-router"
 class NavMain extends React.Component{
 
     componentDidMount(){
@@ -7,11 +9,35 @@ class NavMain extends React.Component{
 
     render(){
         return(
-            <div className="nav-main">
-                <img src="/assets/nile.jpg" alt="" width='200' height="100"/>
-            </div>
+                <div className="nav-main">
+                    <div id="logo">
+                        <Link className="nav-main-item" to="/"><img src="/assets/nile.jpg" alt=""/></Link>
+                    </div>
+                    <div className="search">
+                        <div className="search-categories-container"></div>
+                        <input type="text" placeholder="search"/>  
+                        <div className="search-icon-container">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    {this.props.loggedIn ?
+                        <div className="auth-route-container">
+                            <div onClick={this.props.deleteSession} className="nav-main-item">
+                                <p>Logout</p>
+                            </div>
+                            <Link to="/cart" className="nav-main-item">
+                                <img id="cart-img" src="/assets/cart.jpg" alt="" />
+                            </Link>
+                        </div>
+                    :
+                        <div className="auth-route-container">
+                            <Link className="nav-main-item" to="/signup"><p>Sign Up</p></Link>
+                            <Link className="nav-main-item" to="/login"><p>Log In</p></Link>
+                        </div>
+                    }
+                </div>
         )
     }
 }
 
-export default NavMain
+export default withRouter(NavMain)

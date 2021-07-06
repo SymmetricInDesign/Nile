@@ -9,9 +9,7 @@ class CategoriesNav extends React.Component{
     render(){
         return(
             <div className="categories-nav">
-                <button>Category</button>
-                <Link to="/signup">Sign Up</Link>
-                <Link to="/login">Log In</Link>
+                <Link className='categories-nav-item'>Category</Link>
             </div>
         )
     }

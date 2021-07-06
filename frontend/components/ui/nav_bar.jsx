@@ -1,6 +1,7 @@
 import React from 'react'
 import NavMain from './nav-main'
 import CategoriesNav from './categories-nav'
+import { withRouter } from "react-router"
 class NavBar extends React.Component{
 
     componentDidMount(){
@@ -10,11 +11,14 @@ class NavBar extends React.Component{
     render(){
         return(
             <div className="nav-bar">
-                <NavMain/>
+                <NavMain 
+                    deleteSession={this.props.deleteSession} 
+                    loggedIn = {this.props.loggedIn}
+                />
                 <CategoriesNav/>
             </div>
         )
     }
 }
 
-export default NavBar
+export default withRouter(NavBar)
