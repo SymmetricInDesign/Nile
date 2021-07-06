@@ -4,7 +4,7 @@ class ProductIndex extends React.Component{
 
     componentDidMount(){
         // debugger
-        console.log(this.props)
+        // console.log(this.props)
         this.props.requestProducts()
     }
 
