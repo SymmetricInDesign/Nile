@@ -1,6 +1,6 @@
 import {connect} from 'react-redux'
 import SessionForm from './session_form'
-import {createNewSession} from "../../actions/session_actions"
+import {createNewSession, receiveErrors } from "../../actions/session_actions"
 
 const mSTP = (state, ownProps) => {
     return {
@@ -9,10 +9,9 @@ const mSTP = (state, ownProps) => {
     }
 }
 
-const mDTP = (dispatch, ownProps) => {
-    return {processForm: (formData) => {
-        dispatch(createNewSession(formData))
-    }}
-}
+const mDTP = (dispatch, ownProps) => ({
+    processForm: (formData) => dispatch(createNewSession(formData)),
+    receiveErrors: (errors) => dispatch(receiveErrors(errors))   
+})
 
 export default connect(mSTP, mDTP)(SessionForm)

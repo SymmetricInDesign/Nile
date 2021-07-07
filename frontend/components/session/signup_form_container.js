@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import { createNewUser } from '../../actions/session_actions'
+import { createNewUser, receiveErrors } from '../../actions/session_actions'
 import { withRouter } from "react-router"
 import SessionForm from './session_form'
 
@@ -10,10 +10,9 @@ const mSTP = (state, ownProps) => {
     }
 }
 
-const mDTP = (dispatch, ownProps) => {
-    return {processForm: (formData) => {
-        dispatch(createNewUser(formData))
-    }}
-}
+const mDTP = (dispatch, ownProps) => ({
+    processForm: (formData) => dispatch(createNewUser(formData)),
+    receiveErrors: (errors) => dispatch(receiveErrors(errors))   
+})
 
 export default withRouter(connect(mSTP, mDTP)(SessionForm))
