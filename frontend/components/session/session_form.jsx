@@ -47,18 +47,18 @@ class SessionForm extends React.Component {
                         <h2 className="auth-header">Sign Up</h2>
                         <form className="session-form">
                             <p>Email</p>
-                            <input className="auth-input" type="text" value={this.state.email} onChange={this.updateEmail}/>
+                            <input className="auth-input" type="text" value={this.state.email} onChange={this.updateEmail} autocomplete="new-password"/>
                             <p>Username</p>
-                            <input className="auth-input" type="text" value={this.state.username} onChange={this.updateUsername}/>
+                            <input className="auth-input" type="text" value={this.state.username} onChange={this.updateUsername} autocomplete="new-password"/>
                             <p>Password</p>
-                            <input className="auth-input" type="password" value={this.state.password} onChange={this.updatePassword}/>
+                            <input className="auth-input" type="password" value={this.state.password} onChange={this.updatePassword} autocomplete="new-password"/>
                             <button className="form-button" onClick={this.handleSubmit}>Sign Up</button>
                         </form>
                         <div>
                             <hr/>
                             <div className="auth-footer auth-footer-login">
-                                <p>Already have an account</p>
-                                <Link to="/login">? Sign In</Link>
+                                <p>Already have an account?</p>
+                                <Link to="/login">Sign In</Link>
                             </div>
                         </div>          
                     </div>
