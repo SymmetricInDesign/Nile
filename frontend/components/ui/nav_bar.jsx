@@ -5,7 +5,7 @@ import { withRouter } from "react-router"
 class NavBar extends React.Component{
 
     componentDidMount(){
-        // this.props.requestCategories()
+        this.props.requestCategories()
     }
 
     render(){
@@ -14,8 +14,12 @@ class NavBar extends React.Component{
                 <NavMain 
                     deleteSession={this.props.deleteSession} 
                     loggedIn = {this.props.loggedIn}
+                    user = {this.props.user}
+                    categories={this.props.categories}
                 />
-                <CategoriesNav/>
+                <CategoriesNav
+                    categories={this.props.categories}
+                />
             </div>
         )
     }

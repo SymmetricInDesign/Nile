@@ -7,7 +7,7 @@ export const fetchCategories = () => (
 
 export const fetchCategory = (categoryId) => (
     $.ajax({
-        url: `/api/products/${categoryId}`,
+        url: `/api/categories/${categoryId}`,
         method: "GET"
     })
 )

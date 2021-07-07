@@ -1,4 +1,6 @@
-.app{
+body{
+    background-color: #ebecee;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .clearfix::after {
@@ -18,7 +20,7 @@ header{
 
 .nav-bar{
     width: 100%;
-    height: 80px
+    height: 100px;
 }
 
 .nav-bar p {
@@ -28,11 +30,11 @@ header{
 
 .nav-main{
     background-color: #1f262e;
-    width: 100%;
     height: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 15px;
 }
 
 #logo img{
@@ -42,20 +44,21 @@ header{
 
 .categories-nav {
     display: flex;
-    justify-content: flex-start;
+    box-sizing: border-box;
+    justify-content: space-between;
     background-color: #232f3e;
     width: 100%;
     height: 40%;
+    padding: 0px 4px;
 }
 
 .nav-main-item{
     display: flex;
     color: white;
-    height: 90%;
+    height: 80%;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    /* flex-grow: 1; */
     align-self: center;
     align-items: center;
     justify-content: center;
@@ -75,16 +78,24 @@ header{
 .categories-nav-item{
     display: flex;
     color: white;
-    height: 90%;
-    text-align: center;
+    height: 80%;
     text-decoration: none;
     cursor: pointer;
     flex-grow: 1;
     align-self: center;
     align-items: center;
     justify-content: center;
-    border: 1px solid #1f262e;
-    max-width: 100px;
+    border: 1px solid #232f3e;
+    max-width: 150px;
+    padding: 0 10px;
+
+}
+
+.categories-nav-item p {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .categories-nav-item:hover{
@@ -95,8 +106,8 @@ header{
 .search{
     display: flex;
     margin: 0 auto;
-    width: 70%;
-    height: 60%;
+    width: 60%;
+    height: 70%;
     max-width: 600px;
     border: 1px solid #1f262e;
     border-radius: 5px;
@@ -104,21 +115,39 @@ header{
 
 .search-categories-container{
     box-sizing: border-box;
-    width: 40px;
-    background-color: lightgray;
-    border: 1px solid lightgray;
+    min-width: 40px;
+    background-color: #e0e0e0;
+    border: 1px solid #e0e0e0;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
+    display: flex;
+    align-content: center;
+    border-right: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.search-categories-container select{
+    outline: none;
+    border: none;
+    font-weight: 700;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    width: auto;
+    cursor: pointer;
+}
+
+.search-categories-container option{
+    border: 1px solid #e0e0e0;
+    font-weight: 700;
+    width: auto;
 }
 
 .search input{
     display: inline-block;
     box-sizing: border-box;
-    width: 80%;
+    width: 50%;
     height: 100%;
-    /* text-align: center; */
-    /* border: 1px solid white; */
-    border:none;
+    border: none;
     padding: 5px 10px;
     outline: none;
 }
@@ -137,6 +166,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .auth-route-container{
@@ -144,15 +174,23 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    justify-self: flex-end;
-    /* flex-grow: 1 */
-    max-width: 170px;
+    max-width: 250px;
 }
 
-.auth-route-container a{
+.auth-route-container div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0 10px;
     margin: 1px 10px;
 }
+
+.auth-route-container p{
+    font-size: 14px;
+    display: block
+}
+
 
 #logo{
     padding: 0;
@@ -164,6 +202,14 @@ header{
 
 #logo .nav-main-item{
     padding-left: 0;
+}
+
+#cart-quantity{
+    position: absolute;
+    color: #e28408;
+    font-weight: 900;
+    font-size: 18px;
+    transform: translate(-12px, -10px)
 }
 
 .session-form-container{

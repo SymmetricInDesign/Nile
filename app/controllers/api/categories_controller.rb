@@ -1,6 +1,6 @@
 class Api::CategoriesController < ApplicationController
     def index
-        @products = Category.all
+        @categories = Category.all
         render :index
     end
 
