@@ -50,6 +50,10 @@
             width: 95.5%;
             height: 32px;
             cursor: pointer;
+            &:last-of-type{
+                width: 60%;
+                height: 27px;
+            }
         }
         button:hover{
             background: linear-gradient(180deg, rgb(231, 201, 126) 0%, rgb(236, 199, 105) 35%, rgb(238, 182, 42) 100%);
@@ -112,17 +116,6 @@
     font-size: 15px;
     &:hover{
         background: linear-gradient(180deg, rgb(241, 241, 241) 0%, rgb(233, 233, 233) 35%, rgb(196, 196, 196) 100%);
-    }
-}
-
-.text-link{
-    text-decoration: none;
-    color: blue;
-    font-weight: 300;
-    font-size: 12px;
-    &:hover{
-        color: darkblue;
-        text-decoration: underline;
     }
 }
 

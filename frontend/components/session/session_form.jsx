@@ -12,6 +12,7 @@ class SessionForm extends React.Component {
       };
 
       this.handleSubmit = this.handleSubmit.bind(this)
+      this.loginDemoUser = this.loginDemoUser.bind(this)
       this.updatePassword = this.updatePassword.bind(this)
       this.updateUsername = this.updateUsername.bind(this)
       this.updateEmail = this.updateEmail.bind(this)
@@ -19,6 +20,11 @@ class SessionForm extends React.Component {
 
     componentWillUnmount(){
         this.props.receiveErrors([])
+    }
+
+    loginDemoUser(e){
+        e.preventDefault();
+        this.props.processForm({username: 'DemoMan', password: 'demopassword'})
     }
     
     handleSubmit(e) {
@@ -64,12 +70,11 @@ class SessionForm extends React.Component {
                         <h2 className="auth-header">Sign Up</h2>
                         <form className="session-form">
                             <p>Email</p>
-                            {/* autoComplete="new-password" */}
-                            <input className="auth-input" type="text" value={this.state.email} onChange={this.updateEmail}/>
+                            <input className="auth-input" type="text" value={this.state.email} onChange={this.updateEmail} autoComplete="new-password"/>
                             <p>Username</p>
-                            <input className="auth-input" type="text" value={this.state.username} onChange={this.updateUsername}/>
+                            <input className="auth-input" type="text" value={this.state.username} onChange={this.updateUsername} autoComplete="new-password"/>
                             <p>Password</p>
-                            <input className="auth-input" type="password" value={this.state.password} onChange={this.updatePassword}/>
+                            <input className="auth-input" type="password" value={this.state.password} onChange={this.updatePassword} autoComplete="new-password"/>
                             <button className="form-button" onClick={this.handleSubmit}>Sign Up</button>
                         </form>
                         <div>
@@ -90,7 +95,10 @@ class SessionForm extends React.Component {
                                 <p>Password</p>
                                 <input className="auth-input" type="password" value={this.state.password} onChange={this.updatePassword}/>
                                 <button className="form-button" onClick={this.handleSubmit}>Log In</button>
+                                <button className="form-button" onClick={this.loginDemoUser}>Log In With Demo User</button>
+
                             </form>
+
                         </div>
                         <div className="auth-footer auth-footer-signup">
                             <hr className="signup-hr"/>
