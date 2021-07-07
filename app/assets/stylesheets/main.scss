@@ -1,0 +1,176 @@
+body{
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body{
+    margin: 0
+}
+
+// .session-page-container{
+// }
+
+.session-container{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.session-logo img{
+    width: 150px;
+    height: 75px;
+    margin-bottom: 5px;
+}
+
+.session-form-modal{
+    border: 1px solid rgb(173, 172, 172);
+    border-radius: 7px;
+    margin: auto;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: none;
+    width: 350px;
+    height: 350px;
+    background-color: white;
+}
+
+.login-modal{
+    height: 310px;
+}
+
+.session-form-modal form{
+    padding: 15px;
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.session-form input{
+    border: 1px solid rgb(173, 172, 172);
+    border-radius: 2px;
+    height: 25px;
+    width: 90%;
+    background-color: white;
+    padding: 0 8px;
+}
+
+
+.session-form-modal form p{
+    margin: 10px 0 3px 0;
+    font-weight: 600;
+    font-size: 15px;
+    align-self: baseline;
+    padding-left: 10px;
+}
+
+.form-button{
+    background-color: #f0c14b;
+    border: 1px solid #a88835;
+    background: linear-gradient(180deg, rgb(236, 214, 158) 0%, rgb(247, 212, 125) 35%, rgb(236, 186, 58) 100%);
+    border-radius: 2px;
+    margin-top: 15px;
+    width: 95.5%;
+    height: 32px;
+    cursor: pointer;
+}
+
+.auth-header{
+    text-align: left;
+    padding-left: 20px;
+    margin: 10px 0 0 4px;
+    font-weight: 500;
+}
+
+.auth-header h2{
+    margin: 0;
+}
+
+.auth-footer{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-footer-signup{
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 350px;
+}
+
+
+.auth-footer p{
+    font-size: 12px;
+}
+
+.auth-footer-signup a{
+    padding: 7px 30px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    color: black;
+    text-decoration: none;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, rgb(252, 252, 252) 0%, rgb(231, 231, 231) 35%, rgb(201, 201, 201) 100%);
+    width: 350px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.auth-footer-login a{
+    text-decoration: none;
+    color: blue;
+    font-weight: 300;
+    font-size: 12px
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(197, 195, 195, 0.75), rgba(0, 0, 0, 0));
+}
+
+.signup-hr{
+    width: 35%;
+    background-color: rgb(245, 245, 245);
+}
+
+.page-footer-hr{
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+
+.auth-label{
+    display: block
+}
+
+.session-footer-area{
+    background-image: radial-gradient(ellipse at top, #f5f5f5, transparent 80%);
+    width: 100%;
+    height: 300px;
+}
+
+.product-index{
+    margin: 100px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-card{
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    padding: 10px;
+}

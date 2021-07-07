@@ -3,10 +3,10 @@ class ProductIndexItem extends React.Component{
 
     render(){
         return(
-            <li>
+            <div className="product-card">
                 <h2>{this.props.product.name}</h2>
                 <p>{this.props.product.details}</p>
-            </li>
+            </div>
         )
     }
 }

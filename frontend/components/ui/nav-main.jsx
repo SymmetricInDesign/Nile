@@ -65,8 +65,12 @@ class NavMain extends React.Component{
                         </div>
                     :
                         <div className="auth-route-container">
-                            <Link className="nav-main-item" to="/signup"><p>Sign Up</p></Link>
-                            <Link className="nav-main-item" to="/login"><p>Log In</p></Link>
+                            <div>
+                                <Link className="nav-main-item" to="/signup"><p>Sign Up</p></Link>
+                            </div>
+                            <div>
+                                <Link className="nav-main-item" to="/login"><p>Log In</p></Link>
+                            </div>
                         </div>
                     }
                 </div>
