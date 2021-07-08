@@ -1,6 +1,7 @@
 body{
     background-color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
 .clearfix::after {
@@ -60,18 +61,38 @@ body{
 }
 
 .product-index{
-    margin: 250px 0;
+    // background-image: url("https://images.unsplash.com/photo-1623674567450-b600b67864a6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2135&q=80");
+    background-size: cover;
+    // background-image: url(https://images.unsplash.com/photo-1623674567450-b600b67864a6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2135&q=80);
+    background-image: linear-gradient(to top, 
+      rgb(255, 255, 255) 0%, 
+      rgba(255, 255, 255, 0.6) 20%,
+      rgba(255, 255, 255, 0.3) 80%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url(https://images.unsplash.com/photo-1623674567450-b600b67864a6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2135&q=80);
+    padding: 250px 15px;
     margin-bottom: 0;
-    padding: 0 15px;
     display: flex;
     flex-wrap: wrap;
     min-width: 1100px;
     justify-content: center;
+    position: relative;
+    #img-src-credit{
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        color: black;
+        a{
+            color: blue
+        }
+    }
 }
 
 .product-card{
     border: 1px solid lightgray;
     border-radius: 2px;
+    background-color: white;
     padding: 10px;
     margin: 10px;
     flex-grow: 1;
@@ -79,4 +100,22 @@ body{
     min-width: 310px;
     overflow: hidden;
     flex: 1 0 21%;
+}
+
+.form-button{
+    background-color: #f0c14b;
+    border: 1px solid #a88835;
+    background: linear-gradient(180deg, rgb(236, 214, 158) 0%, rgb(247, 212, 125) 35%, rgb(236, 186, 58) 100%);
+    border-radius: 2px;
+    margin-top: 15px;
+    width: 95.5%;
+    height: 32px;
+    cursor: pointer;
+    &:hover{
+        background: linear-gradient(180deg, rgb(231, 201, 126) 0%, rgb(236, 199, 105) 35%, rgb(238, 182, 42) 100%);
+    }
+    &:focus{
+        background: linear-gradient(180deg, rgb(231, 201, 126) 0%, rgb(236, 199, 105) 35%, rgb(238, 182, 42) 100%);
+        outline:rgb(145, 104, 0);
+    }
 }

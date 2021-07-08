@@ -41,22 +41,9 @@
             align-self: baseline;
             padding-left: 10px;
         }
-        button{
-            background-color: #f0c14b;
-            border: 1px solid #a88835;
-            background: linear-gradient(180deg, rgb(236, 214, 158) 0%, rgb(247, 212, 125) 35%, rgb(236, 186, 58) 100%);
-            border-radius: 2px;
-            margin-top: 15px;
-            width: 95.5%;
-            height: 32px;
-            cursor: pointer;
-            &:last-of-type{
-                width: 60%;
-                height: 27px;
-            }
-        }
-        button:hover{
-            background: linear-gradient(180deg, rgb(231, 201, 126) 0%, rgb(236, 199, 105) 35%, rgb(238, 182, 42) 100%);
+        button:last-of-type{
+            width: 60%;
+            height: 27px;
         }
         input{
             border: 1px solid rgb(173, 172, 172);
@@ -72,8 +59,6 @@
 .login-modal{
     height: 310px;
 }
-
-
 
 .auth-header{
     text-align: left;

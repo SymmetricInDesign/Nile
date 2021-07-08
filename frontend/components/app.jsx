@@ -16,6 +16,7 @@ const App = () => (
         <Route path="/" component={Header}></Route>
     </Switch>
     <Route exact path="/" component={ProductIndexContainer} />
+    
 
   </div>
 );
