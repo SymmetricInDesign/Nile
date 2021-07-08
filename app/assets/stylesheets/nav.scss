@@ -49,11 +49,29 @@ header{
     align-items: center;
     justify-content: center;
     border: 1px solid #1f262e;
+    &:hover{
+        border: 1px solid white;
+        border-radius: 2px;
+    }
 }
 
-.nav-main-item:hover{
-    border: 1px solid white;
-    border-radius: 2px;
+.auth-nav-item{
+    display: flex;
+    color: white;
+    height: 80%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1f262e;
+    margin-left: 5px;
+    padding: 0px 5px; 
+    &:hover{
+        border: 1px solid white;
+        border-radius: 2px;       
+    }
 }
 
 #cart-img{
@@ -109,6 +127,9 @@ header{
     align-content: center;
     border-right: 1px solid lightgray;
     cursor: pointer;
+    &:hover{
+        background-color: #adadad
+    }
 }
 
 .search-categories-container select{
@@ -119,6 +140,9 @@ header{
     border-radius: 4px;
     width: auto;
     cursor: pointer;
+    &:hover{
+        background-color: #d8d8d8
+    }
 }
 
 .search-categories-container option{
@@ -152,6 +176,9 @@ header{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    &:hover{
+        background-color: #f8b155;    
+    }
 }
 
 .auth-route-container{
