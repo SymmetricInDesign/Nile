@@ -55,7 +55,7 @@ class NavMain extends React.Component{
         return(
                 <div className="nav-main">
                     <div id="logo">
-                        <Link className="nav-main-item" to="/"><img src={window.logoImgURL} alt="logo"/></Link>
+                        <Link className="nav-main-item" to="/" replace><img src={window.logoImgURL} alt="logo"/></Link>
                     </div>
                     <form className="search">
                         <div className="search-categories-container">
@@ -72,10 +72,7 @@ class NavMain extends React.Component{
                         <div className="search-icon-container" onClick={this.handleSearch}>
                             <i className="fas fa-search"></i>
                         </div>
-                        {/* <Link to={
-                            {pathname: '/products',
-                             search: `${queryString.stringify(this.state)}`
-                            }}className="search-icon-container" replace>
+                        {/* <Link to='./products' className="search-icon-container" replace onclick={this.handleSearch}>
                             <i className="fas fa-search"></i>
                         </Link> */}
                     </form>
