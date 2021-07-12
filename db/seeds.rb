@@ -10,6 +10,8 @@ require 'open-uri'
 Product.destroy_all
 Category.destroy_all
 
+demo_user = User.find_or_create_by(username: 'DemoMan', email: 'demo@nile.com', password: 'demopassword')
+
 cat1 = Category.find_or_create_by(name: "Furniture", details: "For all your household furnishing needs.")
 cat2 = Category.find_or_create_by(name: "Electronics", details: "Stay Connected. Make your life easier.")
 cat3 = Category.find_or_create_by(name: "Automotive Parts & Accessories", details: "Maintain the thing that gets you from point A to point B.")
