@@ -28,7 +28,18 @@ if !product2.photos.attached?
     product2.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/02-tv_2.jpg'), filename: '02-tv_2.jpg')
     product2.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/02-tv_3.webp'), filename: '02-tv_3.webp')
 end
-product3 = Product.find_or_create_by(category_id: cat2.id, name: "computer monitor", details: "1080p", price: 98.99)
+product3 = Product.find_or_create_by(category_id: cat2.id, name: "computer monitor", details: "<ul>
+    <li>OUTSTANDING VISUALS – This FHD display with IPS technology gives you brilliant visuals and unforgettable quality; with a maximum resolution of 1920 x 1080 at 75 Hz, you’ll experience the image accuracy and wide-viewing spectrums of premium tablets and mobile devices</li>
+    <li>MORE SCREEN, LESS SPACE – Enjoy more desk space than you thought possible with an attractive and ultra-slim design</li>
+    <li>PANORAMIC VIEWING – Vibrant detail from practically any position with consistent color and image clarity maintained across an ultra-wide 178° horizontal and vertical viewing angles</li>
+    <li>MICRO-EDGE DISPLAY – With virtually no bezel encircling the display on three sides, an ultra-wide viewing experience provides for seamless multi-monitor setups</li>
+    <li>EASY CONNECTIVITY – Get the picture quality you’ve been looking for without the additional dongles; easily connect to your PC, gaming console, and peripherals for big-screen entertainment with a broad range of ports, including HDMI, DisplayPort, and VGA ports</li>
+    <li>BUILT-IN SPEAKERS – Experience incredible sound and more immersive entertainment with two built-in 2W speakers</li>
+    <li>LOW BLUE LIGHT – Put less strain on your eyes as a Low Blue Light mode shifts colors to a warmer spectrum and makes whites more natural</li>
+    <li>HEIGHT ADJUSTMENT – Easily adjust your display to the most comfortable position with 100mm range of travel</li>
+    <li>TILTABLE SCREEN – Adjust the screen to your personal preference with a 5° forward or 23° backward tilt</li>
+    <li>WARRANTY AND SUSTAINABILITY – Rest easy and work confidently with an environmentally conscious and energy-efficient monitor, backed by HP standard 1-year limited warranty</li>
+</ul>", price: 98.99)
 if !product3.photos.attached?
     product3.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/03-monitor_1.jpg'), filename: '03-monitor_1.jpg')
     product3.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/03-monitor_2.jpg'), filename: '03-monitor_2.jpg')
@@ -37,7 +48,13 @@ product4 = Product.find_or_create_by(category_id: cat2.id, name: "computer", det
 if !product4.photos.attached?
     product4.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/04-laptop_1.jpg'), filename: '04-laptop_1.jpg')
 end
-product5 = Product.find_or_create_by(category_id: cat1.id, name: "table", details: "also four legs", price: 56.45)
+product5 = Product.find_or_create_by(category_id: cat1.id, name: "table", details: "<ul>
+    <li>SIMPLEST INSTALLATION - 8 seconds to complete !</li>
+    <li>FOLDING AND PORTABLE :When not in use can be folded in the corner, save space; Also convenient to carry when going out for a picnic.</li>
+    <li>APPLICABLE ROOM AND FUNCTION :Suitable for study, bedroom, living room, kitchen, children's room, office.Can be a computer desk, learning tables, game tables, picnic tables,secretarial desk.</li>
+    <li>MATERIAL:MDF -Waterproof and No deformation, durable and solid, brown texture Desktop design is simple yet stylish.</li>
+    <li>SIZE:100*50*72CM (L*W*H : 39.4 * 19.7 * 28.3 Inches)</li>
+  </ul>", price: 56.45)
 if !product5.photos.attached?
     product5.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/05-table_1.jpg'), filename: '05-table_1.jpg')
 end
@@ -53,3 +70,15 @@ if !product6.photos.attached?
 end
 
 puts("DB SEEDED")
+# <ul>
+#     <li>OUTSTANDING VISUALS – This FHD display with IPS technology gives you brilliant visuals and unforgettable quality; with a maximum resolution of 1920 x 1080 at 75 Hz, you’ll experience the image accuracy and wide-viewing spectrums of premium tablets and mobile devices</li>
+#     <li>MORE SCREEN, LESS SPACE – Enjoy more desk space than you thought possible with an attractive and ultra-slim design</li>
+#     <li>PANORAMIC VIEWING – Vibrant detail from practically any position with consistent color and image clarity maintained across an ultra-wide 178° horizontal and vertical viewing angles</li>
+#     <li>MICRO-EDGE DISPLAY – With virtually no bezel encircling the display on three sides, an ultra-wide viewing experience provides for seamless multi-monitor setups</li>
+#     <li>EASY CONNECTIVITY – Get the picture quality you’ve been looking for without the additional dongles; easily connect to your PC, gaming console, and peripherals for big-screen entertainment with a broad range of ports, including HDMI, DisplayPort, and VGA ports</li>
+#     <li>BUILT-IN SPEAKERS – Experience incredible sound and more immersive entertainment with two built-in 2W speakers</li>
+#     <li>LOW BLUE LIGHT – Put less strain on your eyes as a Low Blue Light mode shifts colors to a warmer spectrum and makes whites more natural</li>
+#     <li>HEIGHT ADJUSTMENT – Easily adjust your display to the most comfortable position with 100mm range of travel</li>
+#     <li>TILTABLE SCREEN – Adjust the screen to your personal preference with a 5° forward or 23° backward tilt</li>
+#     <li>WARRANTY AND SUSTAINABILITY – Rest easy and work confidently with an environmentally conscious and energy-efficient monitor, backed by HP standard 1-year limited warranty</li>
+# </ul>

@@ -6,18 +6,18 @@ const queryString = require('query-string')
 // import {withRouter} from "react-router-dom"
 
 const mSTP = (state={}, ownProps) => {
-    console.log(queryString.parse(ownProps.location.search))
-    let searchText = ownProps.location.search.searchText ? ownProps.location.search.searchText : -1 
-    let searchCategory = ownProps.location.search.searchCategory ? ownProps.location.search.searchCategory : 'All Departments'
+    // console.log(queryString.parse(ownProps.location.search))
+    // let searchText = ownProps.location.search.searchText ? ownProps.location.search.searchText : -1 
+    // let searchCategory = ownProps.location.search.searchCategory ? ownProps.location.search.searchCategory : 'All Departments'
     return {
         products: Object.values(state.entities.products),
-        searchText: searchText,
-        searchCategory: searchCategory
+        // searchText: searchText,
+        // searchCategory: searchCategory
     }
 }
 
 const mDTP = dispatch => ({
-        requestProducts: (searchCategory, searchText) => dispatch(fetchProducts(searchCategory, searchText))
+        requestProducts: () => dispatch(fetchProducts())
 })
 
 export default withRouter(connect(mSTP, mDTP)(ProductIndex))

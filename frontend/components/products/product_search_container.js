@@ -1,4 +1,4 @@
-import ProductIndex from "./product_index"
+import ProductSearch from "./product_search"
 import {connect} from "react-redux"
 import { fetchProducts } from "../../actions/product_actions"
 import { withRouter } from "react-router"
@@ -7,11 +7,13 @@ const queryString = require('query-string')
 // import {withRouter} from "react-router-dom"
 
 const mSTP = (state={}, ownProps) => {
-    console.log(state.ui.filters.bounds)
-    let searchText = state.ui.filters.bounds.searchText ? state.ui.filters.bounds.searchText : -1 
-    let searchCategory = state.ui.filters.bounds.searchCategory ? state.ui.filters.bounds.searchCategory : 'All Departments'
-    debugger
+    // console.log(queryString.parse(ownProps.location.search))
+    const bounds = queryString.parse(ownProps.location.search)
+    let searchText = bounds.searchText ? bounds.searchText : "-1"
+    let searchCategory = bounds.searchCategory ? bounds.searchCategory : 'All Departments'
+    // debugger
     return {
+        bounds: state.ui.filters.bounds,
         products: Object.values(state.entities.products),
         searchText: searchText,
         searchCategory: searchCategory
@@ -23,6 +25,6 @@ const mDTP = dispatch => ({
         updateBounds: (bounds)=> dispatch(updateBounds(bounds))
 })
 
-export default withRouter(connect(mSTP, mDTP)(ProductIndex))
+export default withRouter(connect(mSTP, mDTP)(ProductSearch))
 
 

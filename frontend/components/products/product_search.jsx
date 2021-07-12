@@ -1,9 +1,9 @@
 import React from 'react'
 import ProductIndexItem from './product_index_item'
-class ProductIndex extends React.Component{
+class ProductSearch extends React.Component{
 
     componentDidMount(){
-        this.props.requestProducts()
+        this.props.requestProducts(this.props.searchCategory, this.props.searchText)
     }
 
     render(){
@@ -19,4 +19,4 @@ class ProductIndex extends React.Component{
         )
     } }
 
-export default ProductIndex
+export default ProductSearch

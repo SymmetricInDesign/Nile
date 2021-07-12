@@ -152,7 +152,7 @@ header{
     width: auto;
 }
 
-.search input{
+.search input:first-of-type{
     display: inline-block;
     box-sizing: border-box;
     width: 50%;
@@ -160,11 +160,14 @@ header{
     border: none;
     padding: 5px 10px;
     outline: none;
+    &:focus{
+        border: none;
+        outline: none;
+    }
 }
 
-.search input:focus{
-    border: none;
-    outline: none;
+.hidden{
+    display: none;
 }
 
 .search-icon-container{

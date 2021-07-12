@@ -12,12 +12,20 @@ class NavMain extends React.Component{
         }
         this.updateCategory = this.updateCategory.bind(this)
         this.updateSearchText = this.updateSearchText.bind(this)
-        this.handleSearch = this.handleSearch.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.checkForEnter = this.checkForEnter.bind(this)
     }
 
     componentDidMount(){
         // this.props.requestCategories()
     }
+    componentDidUpdate(prevProps) {
+        if (this.props.location !== prevProps.location) {
+          debugger
+          this.props.requestProducts(this.state.searchCategory, this.state.searchText)
+        }
+    }
+
 
     updateCategory(e){
         this.setState({searchCategory: e.target.value})
@@ -26,23 +34,15 @@ class NavMain extends React.Component{
         this.setState({searchText: e.target.value})
     }
 
-    handleSearch(e){
-        e.preventDefault()
-        let searchTerm
-        searchTerm = this.state.searchText == ''
-            ? -1
-            : this.state.searchText;
-        const bounds = {
-            searchText: searchTerm,
-            category: this.state.searchCategory
+    checkForEnter(e){
+        // debugger
+        if (e.charCode === 13){
+            this.searchButton.click()
         }
-        this.props.updateBounds(bounds)
-        this.props.requestProducts(this.state.searchCategory, searchTerm)
-        // this.props.history.push({
-        //     pathname: '/products',
-        //     state: { searchTerm: searchTerm,
-        //     category: this.state.searchCategory }
-        // });
+    }
+
+    handleSubmit(e){
+        e.preventDefault()
     }
 
     render(){
@@ -50,14 +50,14 @@ class NavMain extends React.Component{
         const categoryOptions = this.props.categories.map(category=>(
             <option key={category.id} value={category.name}>{category.name[0].toUpperCase() + category.name.slice(1)}</option>
         ))
-        categoryOptions.unshift(<option key={-10} value="All Categories">All Departments</option>)
+        categoryOptions.unshift(<option key={-10} value="All Departments">All Departments</option>)
 
         return(
                 <div className="nav-main">
                     <div id="logo">
                         <Link className="nav-main-item" to="/" replace><img src={window.logoImgURL} alt="logo"/></Link>
                     </div>
-                    <form className="search">
+                    <div className="search">
                         <div className="search-categories-container">
                             <select 
                                 name="category" 
@@ -68,14 +68,15 @@ class NavMain extends React.Component{
                                 {categoryOptions}
                             </select>
                         </div>
-                        <input type="text" onChange={this.updateSearchText}/>  
-                        <div className="search-icon-container" onClick={this.handleSearch}>
+                        <input type="text" onChange={this.updateSearchText} onKeyPress={this.checkForEnter}/>
+                        <Link to={{
+                            pathname: '/products/search',
+                            search: queryString.stringify(this.state)
+                            }} 
+                            className="search-icon-container" replace ref={node => this.searchButton = node}>
                             <i className="fas fa-search"></i>
-                        </div>
-                        {/* <Link to='./products' className="search-icon-container" replace onclick={this.handleSearch}>
-                            <i className="fas fa-search"></i>
-                        </Link> */}
-                    </form>
+                        </Link>
+                    </div>
 
                     {this.props.loggedIn ?
                         <div className="auth-route-container">
@@ -101,3 +102,23 @@ class NavMain extends React.Component{
 }
 
 export default withRouter(NavMain)
+
+
+    // handleSearch(e){
+    //     e.preventDefault()
+        // let searchTerm
+        // searchTerm = this.state.searchText == ''
+        //     ? -1
+        //     : this.state.searchText;
+        // const bounds = {
+        //     searchText: searchTerm,
+        //     category: this.state.searchCategory
+        // }
+        // this.props.updateBounds(bounds)
+        // this.props.requestProducts(this.state.searchCategory, searchTerm)
+        // this.props.history.push({
+        //     pathname: '/products',
+        //     state: { searchTerm: searchTerm,
+        //     category: this.state.searchCategory }
+        // });
+    // }

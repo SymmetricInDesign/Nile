@@ -18,8 +18,8 @@ const App = () => (
         <Route path="/" component={Header}></Route>
     </Switch>
     <Switch>
+      <Route path="/products/search" component={ProductSearchContainer} />
       <Route exact path="/products/:productId" component={ProductShowContainer} />
-      <Route path="/products" component={ProductSearchContainer} />
       <Route exact path="/" component={ProductIndexContainer} />
     </Switch>
     
