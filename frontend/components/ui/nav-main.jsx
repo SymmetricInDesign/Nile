@@ -8,11 +8,11 @@ class NavMain extends React.Component{
         super(props)
         this.state = {
             searchText: "",
-            searchCategory: "All Categories"
+            searchCategory: "All Departments"
         }
         this.updateCategory = this.updateCategory.bind(this)
         this.updateSearchText = this.updateSearchText.bind(this)
-        // this.handleSearch = this.handleSearch.bind(this)
+        this.handleSearch = this.handleSearch.bind(this)
     }
 
     componentDidMount(){
@@ -26,18 +26,24 @@ class NavMain extends React.Component{
         this.setState({searchText: e.target.value})
     }
 
-    // handleSearch(e){
-    //     e.preventDefault()
-    //     let searchTerm
-    //     searchTerm = this.state.searchText == ''
-    //         ? -1
-    //         : this.state.searchText;
-    //     this.props.history.push({
-    //         pathname: '/products',
-    //         state: { searchTerm: searchTerm,
-    //         category: this.state.searchCategory }
-    //     });
-    // }
+    handleSearch(e){
+        e.preventDefault()
+        let searchTerm
+        searchTerm = this.state.searchText == ''
+            ? -1
+            : this.state.searchText;
+        const bounds = {
+            searchText: searchTerm,
+            category: this.state.searchCategory
+        }
+        this.props.updateBounds(bounds)
+        this.props.requestProducts(this.state.searchCategory, searchTerm)
+        // this.props.history.push({
+        //     pathname: '/products',
+        //     state: { searchTerm: searchTerm,
+        //     category: this.state.searchCategory }
+        // });
+    }
 
     render(){
         // console.log(this.props)
@@ -63,12 +69,15 @@ class NavMain extends React.Component{
                             </select>
                         </div>
                         <input type="text" onChange={this.updateSearchText}/>  
-                        <Link to={
+                        <div className="search-icon-container" onClick={this.handleSearch}>
+                            <i className="fas fa-search"></i>
+                        </div>
+                        {/* <Link to={
                             {pathname: '/products',
                              search: `${queryString.stringify(this.state)}`
                             }}className="search-icon-container" replace>
                             <i className="fas fa-search"></i>
-                        </Link>
+                        </Link> */}
                     </form>
 
                     {this.props.loggedIn ?

@@ -7,6 +7,7 @@ class ProductIndex extends React.Component{
     }
 
     render(){
+        console.log(`PROPS:`, this.props)
         const productDivs = this.props.products.map(product => (
             <ProductIndexItem key={product.id} product={product}/> 
         )) 

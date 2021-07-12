@@ -5,10 +5,10 @@ class Product < ApplicationRecord
         if (category == 'All Departments' && searchTerm == '-1')
             Product.with_attached_photos.all
         elsif (category == 'All Departments' && searchTerm != '-1')
-            Product.with_attached_photos.where("name LIKE #{searchTerm}")
+            Product.with_attached_photos.where("name LIKE '#{searchTerm}'")
         else
-            category_id = Category.find_by(name: category)
-            Product.with_attached_photos.where("name LIKE #{searchTerm} AND category_id = #{category_id}")
+            category_id = Category.find_by(name: category).id
+            Product.with_attached_photos.where("name LIKE '#{searchTerm}'' AND category_id = #{category_id}")
         end
     end
 end

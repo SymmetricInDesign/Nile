@@ -7,9 +7,10 @@ const queryString = require('query-string')
 // import {withRouter} from "react-router-dom"
 
 const mSTP = (state={}, ownProps) => {
-    // console.log(queryString.parse(ownProps.location.search))
-    let searchText = state.filters.bounds.searchText ? state.filters.bounds.searchText : -1 
-    let searchCategory = state.filters.bounds.searchCategory ? state.filters.bounds.searchCategory : 'All Departments'
+    console.log(state.ui.filters.bounds)
+    let searchText = state.ui.filters.bounds.searchText ? state.ui.filters.bounds.searchText : -1 
+    let searchCategory = state.ui.filters.bounds.searchCategory ? state.ui.filters.bounds.searchCategory : 'All Departments'
+    debugger
     return {
         products: Object.values(state.entities.products),
         searchText: searchText,

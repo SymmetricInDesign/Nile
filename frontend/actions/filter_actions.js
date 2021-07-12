@@ -2,7 +2,7 @@
 export const UPDATE_BOUNDS = "UPDATE_BOUNDS"
 
 export const updateBounds = (bounds) => {
-    // debugger
+    debugger
     return {
         type: UPDATE_BOUNDS,
         bounds

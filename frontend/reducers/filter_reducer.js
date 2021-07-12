@@ -2,14 +2,13 @@
 // import {RECEIVE_FILTERS} from '../actions/filter_actions'
 import {UPDATE_BOUNDS} from '../actions/filter_actions'
 
-export default (state={}, action) => {
+export default (state={bounds: {searchText: "-1", category: "All Departments"}}, action) => {
     Object.freeze(state)
     let newState = Object.assign({}, state)
+    // if (!newState.bounds) newState.bounds={searchText: "-1", category: "All Departments"}
     switch(action.type){
-        // case RECEIVE_FILTERS:
-        //     return action.filters
         case UPDATE_BOUNDS: 
-            newState[bounds] = action.bounds
+            newState.bounds = action.bounds
             return newState
         default:
             return state

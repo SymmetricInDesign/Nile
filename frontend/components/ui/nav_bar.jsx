@@ -12,7 +12,9 @@ class NavBar extends React.Component{
         return(
             <div className="nav-bar">
                 <NavMain 
-                    deleteSession={this.props.deleteSession} 
+                    deleteSession={this.props.deleteSession}
+                    updateBounds={this.props.updateBounds}
+                    requestProducts={this.props.requestProducts}  
                     loggedIn = {this.props.loggedIn}
                     user = {this.props.user}
                     categories={this.props.categories}
