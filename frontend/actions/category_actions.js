@@ -10,7 +10,7 @@ export const receiveCategories = (categories) => {
 }
 
 
-
+//fetch categories from database and update redux state accordingly
 export const fetchCategories = () => dispatch => (
     CategoryApiUtil.fetchCategories().then(categories => dispatch(receiveCategories(categories)))
 )
