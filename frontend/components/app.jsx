@@ -2,6 +2,7 @@ import React from 'react'
 import {AuthRoute} from "../util/route_util"
 import ProductIndexContainer from './products/product_index_container';
 import ProductShowContainer from './products/product_show_container';
+import ProductSearchContainer from './products/product_search_container';
 import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container"
 import {Switch, Route, withRouter} from 'react-router-dom'
@@ -18,8 +19,8 @@ const App = () => (
     </Switch>
     <Switch>
       <Route exact path="/products/:productId" component={ProductShowContainer} />
-      <Route path="/products" component={ProductIndexContainer} />
-      <Route exact path="/" component={ProductIndexContainer} />
+      <Route path="/products" component={ProductSearchContainer} />
+      <Route exact path="/" component={ProductSearchContainer} />
     </Switch>
     
 
