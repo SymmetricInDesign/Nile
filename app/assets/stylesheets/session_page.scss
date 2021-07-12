@@ -8,6 +8,11 @@
     align-items: center;
     flex-direction: column;
     margin-top: 30px;
+    hr {
+        border: 0;
+        height: 2px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(197, 195, 195, 0.75), rgba(0, 0, 0, 0));
+    }
 }
 
 .session-logo img{
@@ -41,7 +46,7 @@
             align-self: baseline;
             padding-left: 10px;
         }
-        button:last-of-type{
+        .demo-button{
             width: 60%;
             height: 27px;
         }
@@ -104,11 +109,7 @@
     }
 }
 
-hr {
-    border: 0;
-    height: 2px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(197, 195, 195, 0.75), rgba(0, 0, 0, 0));
-}
+
 
 .signup-hr{
     width: 35%;

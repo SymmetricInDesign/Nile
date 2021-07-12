@@ -10,6 +10,7 @@ class Api::SessionsController < ApplicationController
         end
     end
 
+
     def destroy
         if current_user
             logout!

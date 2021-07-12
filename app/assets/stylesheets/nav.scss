@@ -140,6 +140,7 @@ header{
     border-radius: 4px;
     width: auto;
     cursor: pointer;
+    padding: 0 0 0 5px;
     &:hover{
         background-color: #d8d8d8
     }
@@ -176,6 +177,7 @@ header{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    color: black;
     &:hover{
         background-color: #f8b155;    
     }

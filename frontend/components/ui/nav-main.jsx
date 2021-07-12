@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { withRouter } from "react-router"
+const queryString = require('query-string')
 class NavMain extends React.Component{
 
     constructor(props){
@@ -10,6 +11,8 @@ class NavMain extends React.Component{
             searchCategory: "All Categories"
         }
         this.updateCategory = this.updateCategory.bind(this)
+        this.updateSearchText = this.updateSearchText.bind(this)
+        // this.handleSearch = this.handleSearch.bind(this)
     }
 
     componentDidMount(){
@@ -19,13 +22,25 @@ class NavMain extends React.Component{
     updateCategory(e){
         this.setState({searchCategory: e.target.value})
     }
-
-    handleSearch(e){
-        e.preventDefault()
+    updateSearchText(e){
+        this.setState({searchText: e.target.value})
     }
 
+    // handleSearch(e){
+    //     e.preventDefault()
+    //     let searchTerm
+    //     searchTerm = this.state.searchText == ''
+    //         ? -1
+    //         : this.state.searchText;
+    //     this.props.history.push({
+    //         pathname: '/products',
+    //         state: { searchTerm: searchTerm,
+    //         category: this.state.searchCategory }
+    //     });
+    // }
+
     render(){
-        console.log(this.props)
+        // console.log(this.props)
         const categoryOptions = this.props.categories.map(category=>(
             <option key={category.id} value={category.name}>{category.name[0].toUpperCase() + category.name.slice(1)}</option>
         ))
@@ -47,11 +62,15 @@ class NavMain extends React.Component{
                                 {categoryOptions}
                             </select>
                         </div>
-                        <input type="text"/>  
-                        <div className="search-icon-container" onClick={this.handleSearch}>
+                        <input type="text" onChange={this.updateSearchText}/>  
+                        <Link to={
+                            {pathname: '/products',
+                             search: `${queryString.stringify(this.state)}`
+                            }}className="search-icon-container" replace>
                             <i className="fas fa-search"></i>
-                        </div>
+                        </Link>
                     </form>
+
                     {this.props.loggedIn ?
                         <div className="auth-route-container">
                             <div onClick={this.props.deleteSession} className="nav-main-item">
@@ -65,14 +84,11 @@ class NavMain extends React.Component{
                         </div>
                     :
                         <div className="auth-route-container">
-                            {/* <div> */}
-                                <Link className="auth-nav-item" to="/signup"><p>Sign Up</p></Link>
-                            {/* </div>
-                            <div> */}
-                                <Link className="auth-nav-item" to="/login"><p>Log In</p></Link>
-                            {/* </div> */}
+                            <Link className="auth-nav-item" to="/signup"><p>Sign Up</p></Link>
+                            <Link className="auth-nav-item" to="/login"><p>Log In</p></Link>
                         </div>
                     }
+                    
                 </div>
         )
     }
