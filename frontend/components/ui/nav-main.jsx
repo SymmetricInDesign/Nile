@@ -8,7 +8,7 @@ class NavMain extends React.Component{
         super(props)
         this.state = {
             searchText: "",
-            searchCategory: "All Departments"
+            category: "All Departments"
         }
         this.updateCategory = this.updateCategory.bind(this)
         this.updateSearchText = this.updateSearchText.bind(this)
@@ -16,19 +16,8 @@ class NavMain extends React.Component{
         this.checkForEnter = this.checkForEnter.bind(this)
     }
 
-    componentDidMount(){
-        // this.props.requestCategories()
-    }
-    componentDidUpdate(prevProps) {
-        if (this.props.location !== prevProps.location) {
-          debugger
-          this.props.requestProducts(this.state.searchCategory, this.state.searchText)
-        }
-    }
-
-
     updateCategory(e){
-        this.setState({searchCategory: e.target.value})
+        this.setState({category: e.target.value})
     }
     updateSearchText(e){
         this.setState({searchText: e.target.value})
@@ -62,7 +51,7 @@ class NavMain extends React.Component{
                             <select 
                                 name="category" 
                                 id="category-select" 
-                                value={this.state.searchCategory}
+                                value={this.state.category}
                                 onChange={this.updateCategory}
                                 >
                                 {categoryOptions}
@@ -100,25 +89,34 @@ class NavMain extends React.Component{
         )
     }
 }
+// handleSearch(e){
+//     e.preventDefault()
+    // let searchTerm
+    // searchTerm = this.state.searchText == ''
+    //     ? -1
+    //     : this.state.searchText;
+    // const bounds = {
+    //     searchText: searchTerm,
+    //     category: this.state.category
+    // }
+    // this.props.updateBounds(bounds)
+    // this.props.requestProducts(this.state.category, searchTerm)
+    // this.props.history.push({
+    //     pathname: '/products',
+    //     state: { searchTerm: searchTerm,
+    //     category: this.state.category }
+    // });
+// }
+
+
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.location.search !== prevProps.location.search) {
+    //       console.log("from nav-main")
+    //       console.log(prevProps)
+    //       console.log(this.props)
+    //       this.props.requestProducts(this.state.category, this.state.searchText)
+    //     }
+    // }
 
 export default withRouter(NavMain)
 
-
-    // handleSearch(e){
-    //     e.preventDefault()
-        // let searchTerm
-        // searchTerm = this.state.searchText == ''
-        //     ? -1
-        //     : this.state.searchText;
-        // const bounds = {
-        //     searchText: searchTerm,
-        //     category: this.state.searchCategory
-        // }
-        // this.props.updateBounds(bounds)
-        // this.props.requestProducts(this.state.searchCategory, searchTerm)
-        // this.props.history.push({
-        //     pathname: '/products',
-        //     state: { searchTerm: searchTerm,
-        //     category: this.state.searchCategory }
-        // });
-    // }

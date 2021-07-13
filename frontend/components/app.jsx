@@ -5,6 +5,7 @@ import ProductShowContainer from './products/product_show_container';
 import ProductSearchContainer from './products/product_search_container';
 import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container"
+import CartContainer from './cart/cart_container'
 import {Switch, Route, withRouter} from 'react-router-dom'
 import Header from './header'
 
@@ -20,6 +21,7 @@ const App = () => (
     <Switch>
       <Route path="/products/search" component={ProductSearchContainer} />
       <Route exact path="/products/:productId" component={ProductShowContainer} />
+      <Route exact path="/cart" component={CartContainer} />
       <Route exact path="/" component={ProductIndexContainer} />
     </Switch>
     

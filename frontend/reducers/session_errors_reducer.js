@@ -7,7 +7,7 @@ export default (state=[], action) => {
 
     switch(action.type){
         case RECEIVE_SESSION_ERRORS:
-            console.log("sessions_error_reducer line 10: ", action.errors)
+            // console.log("sessions_error_reducer line 10: ", action.errors)
             return action.errors
         case RECEIVE_CURRENT_USER:
             return []

@@ -14,7 +14,7 @@ const mSTP = (state={}) => ({
 
 const mDTP = dispatch => ({
         requestCategories: () => dispatch(fetchCategories()),
-        requestProducts: (searchCategory, searchText) => dispatch(fetchProducts(searchCategory, searchText)),
+        requestProducts: (category, searchText) => dispatch(fetchProducts(category, searchText)),
         deleteSession: ()=> dispatch(deleteSession()),
         updateBounds: (bounds) => dispatch(updateBounds(bounds))
 })

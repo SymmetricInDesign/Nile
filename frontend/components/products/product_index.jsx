@@ -3,11 +3,12 @@ import ProductIndexItem from './product_index_item'
 class ProductIndex extends React.Component{
 
     componentDidMount(){
+        console.log("from product_index")
         this.props.requestProducts()
     }
 
     render(){
-        console.log(`PROPS:`, this.props)
+        // console.log(`PROPS:`, this.props)
         const productDivs = this.props.products.map(product => (
             <ProductIndexItem key={product.id} product={product}/> 
         )) 

@@ -42,7 +42,7 @@ class ProductShow extends React.Component{
             this.numSlides = images.length
             const imageSlides = images.map((image, index) => (
                 <div key={index} className="slide-image fade">
-                    <div className="image-index">{index+1} / {images.length}</div>
+                    {images.length > 1 ? <div className="image-index">{index+1} / {images.length}</div> : null }
                     {image}
                     {/* <div className="image-caption">Caption</div> */}
                 </div>

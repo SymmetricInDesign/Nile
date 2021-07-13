@@ -2,7 +2,7 @@ class Api::ProductsController < ApplicationController
     def index
         puts("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa")
         # debugger
-        @products = Product.filter(params[:category], params[:searchTerm])
+        @products = Product.filter(params[:category], params[:searchText])
         render :index
     end
     

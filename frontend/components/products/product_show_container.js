@@ -4,7 +4,7 @@ import { fetchProduct } from "../../actions/product_actions"
 // import {withRouter} from "react-router-dom"
 
 const mSTP = (state={}, ownProps) => {
-    console.log(state)
+    // console.log(state)
     return {
         product: state.entities.products[ownProps.match.params.productId]
     }

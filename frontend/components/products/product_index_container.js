@@ -8,11 +8,11 @@ const queryString = require('query-string')
 const mSTP = (state={}, ownProps) => {
     // console.log(queryString.parse(ownProps.location.search))
     // let searchText = ownProps.location.search.searchText ? ownProps.location.search.searchText : -1 
-    // let searchCategory = ownProps.location.search.searchCategory ? ownProps.location.search.searchCategory : 'All Departments'
+    // let category = ownProps.location.search.category ? ownProps.location.search.category : 'All Departments'
     return {
         products: Object.values(state.entities.products),
         // searchText: searchText,
-        // searchCategory: searchCategory
+        // category: category
     }
 }
 

@@ -24,6 +24,12 @@
             color: blue
         }
     }
+    &>h2{
+        position: absolute;
+        top: 85px;
+        left: 50px;
+
+    }
 }
 
 .product-card{
@@ -36,6 +42,7 @@
     flex-grow: 1;
     height: 400px;
     min-width: 310px;
+    max-width: 50%;
     overflow: hidden;
     flex: 1 0 21%;
     display: flex;
@@ -104,6 +111,7 @@
     padding: 0px 10px 40px 10px;
     justify-content: space-between;
     width: 100%;
+    position: relative;
     hr{
         background-color: transparent;
         display: block;
@@ -148,6 +156,7 @@
     justify-content: space-between;
     min-width: 250px;
     max-width: 250px;
+    max-height: 500px;
     // width: 250px;
     button {
         width: 100%;
