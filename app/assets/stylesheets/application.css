@@ -12,6 +12,8 @@
  *
  *
  *= require session_page.scss
+ *= require products.scss
+ *= require image-slideshow.scss
  *= require reset.scss
  *= require nav.scss
  *= require main.scss

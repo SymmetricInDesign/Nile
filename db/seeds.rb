@@ -9,8 +9,11 @@ require 'open-uri'
 
 Product.destroy_all
 Category.destroy_all
+CartItem.destroy_all
 
-if !User.find_by_credentials('DemoMan', 'demopassword')
+demo_user = User.find_by_credentials('DemoMan', 'demopassword')
+
+if !demo_user
     demo_user = User.new(username: 'DemoMan', email: 'demo@nile.com', password: 'demopassword')
     demo_user.save
 end
@@ -73,6 +76,9 @@ product6 = Product.find_or_create_by(category_id: cat1.id, name: "couch", detail
 if !product6.photos.attached?
     product6.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/06-couch_1.jpg'), filename: '06-couch_1.jpg')
 end
+
+cart_item1 = CartItem.find_or_create_by(user_id: demo_user.id, product_id: product6.id, quantity: 7)
+cart_item2 = CartItem.find_or_create_by(user_id: demo_user.id, product_id: product5.id, quantity: 5)
 
 puts("DB SEEDED")
 # <ul>
