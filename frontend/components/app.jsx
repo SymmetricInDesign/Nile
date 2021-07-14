@@ -1,5 +1,5 @@
 import React from 'react'
-import {AuthRoute} from "../util/route_util"
+import {AuthRoute, ProtectedRoute} from "../util/route_util"
 import ProductIndexContainer from './products/product_index_container';
 import ProductShowContainer from './products/product_show_container';
 import ProductSearchContainer from './products/product_search_container';
@@ -21,8 +21,8 @@ const App = () => (
     <Switch>
       <Route path="/products/search" component={ProductSearchContainer} />
       <Route exact path="/products/:productId" component={ProductShowContainer} />
-      <Route exact path="/cart" component={CartContainer} />
-      <Route exact path="/" component={ProductIndexContainer} />
+      <ProtectedRoute exact path="/cart" component={CartContainer} />
+      <Route path="/" component={ProductIndexContainer} />
     </Switch>
     
 

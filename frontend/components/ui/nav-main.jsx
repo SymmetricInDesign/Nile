@@ -16,6 +16,10 @@ class NavMain extends React.Component{
         this.checkForEnter = this.checkForEnter.bind(this)
     }
 
+    componentDidMount(){
+        this.props.requestCartItems()
+    }
+
     updateCategory(e){
         this.setState({category: e.target.value})
     }
@@ -74,7 +78,7 @@ class NavMain extends React.Component{
                                 <p>Logout</p>
                             </div>
                             <Link to="/cart" className="nav-main-item">
-                                <p id="cart-quantity">4</p>
+                                <p id="cart-quantity">{this.props.cartItems.length}</p>
                                 <img id="cart-img" src={window.cartImgURL} alt="cart" />
                             </Link>
                         </div>
