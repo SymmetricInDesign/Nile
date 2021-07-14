@@ -221,10 +221,14 @@ header{
     padding-left: 0;
 }
 
-#cart-quantity{
+.cart-quantity{
     position: absolute;
     color: #e28408;
     font-weight: 900;
     font-size: 18px;
     transform: translate(-13px, -10px)
+}
+
+.cart-quantity-small{
+    font-size: 14px;
 }

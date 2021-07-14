@@ -9,11 +9,12 @@ export const receiveCartItems = (cartItems) => ({
     cartItems: cartItems
 })
 
-export const receiveCartItem = (cartItem) => ({
-    type: RECEIVE_CART_ITEM,
-    cartItem: cartItem
-})
-
+export const receiveCartItem = (cartItem) => {
+    return {
+        type: RECEIVE_CART_ITEM,
+        cartItem: cartItem
+    }
+}
 export const removeCartItem = (cartItemId) => ({
     type: REMOVE_CART_ITEM,
     cartItemId: cartItemId
@@ -25,6 +26,10 @@ export const fetchCartItems = () => dispatch => (
 
 export const fetchCartItem = (cartItemId) => dispatch => (
     CartApiUtil.fetchCartItem(cartItemId).then(cartItem => dispatch(receiveCartItem(cartItem)))
+)
+
+export const createCartItem = (productId, qty) => dispatch => (
+    CartApiUtil.createCartItem(productId, qty).then(cartItem => dispatch(receiveCartItem(cartItem)))
 )
 
 export const updateCartItem = (cartItem) => dispatch => (

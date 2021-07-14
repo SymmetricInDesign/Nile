@@ -1,10 +1,12 @@
 import React from 'react'
+import ProductShowOrderSection from './product_show_order'
 class ProductShow extends React.Component{
     constructor(props){
         super(props)
         this.state = {
             slideIndex: 0
         }   
+        this.qty = 1
         this.numSlides = 0
         this.nextSlide = this.nextSlide.bind(this)
         this.prevSlide = this.prevSlide.bind(this)
@@ -87,19 +89,12 @@ class ProductShow extends React.Component{
                             <h2>About this item</h2>
                             <div dangerouslySetInnerHTML={{ __html: product.details }} />
                         </div>
-                        <div className="show-order-section">
-                            <h2 className="price">{product.price}</h2>
-                            <h3>FREE Delivery</h3>
-                            <h2 className="information-text">In Stock</h2>
-                            <div className="qty-select-container">
-                                <p>Qty: </p>
-                                <select name="quantity" className="qty-select">
-                                    {qtyOptions}
-                                </select>
-                            </div>
-                            <button className='order-button'>Add to Cart</button>
-                            <button className='order-button'>Buy Now</button>
-                        </div>
+                        <ProductShowOrderSection 
+                            product={product}
+                            qtyOptions = {qtyOptions}
+                            itemInCart={this.props.itemInCart}
+                            createCartItem={this.props.createCartItem}
+                        />
                     </div>
                     <hr />
                 </div>

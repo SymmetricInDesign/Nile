@@ -9,7 +9,7 @@ class Api::CartItemsController < ApplicationController
     end
 
     def create
-        @cart_item = CartItem.new(product_id: params[:product_id], user_id: current_user.id, quantity: 1)
+        @cart_item = CartItem.new(product_id: params[:product_id], user_id: current_user.id, quantity: params[:qty])
         if @cart_item && @cart_item.save
             render json: @cart_item
         else
@@ -19,7 +19,7 @@ class Api::CartItemsController < ApplicationController
 
     def update
         @cart_item = CartItem.find(params[:id])
-        if @cart_item && @cart_item.update
+        if @cart_item && @cart_item.update(quantity: params[:cart_item][:quantity])
             render json: @cart_item
         else
             render json: @cart_item.errors.full_messages, status: 422

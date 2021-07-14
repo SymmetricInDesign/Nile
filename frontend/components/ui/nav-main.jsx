@@ -28,7 +28,6 @@ class NavMain extends React.Component{
     }
 
     checkForEnter(e){
-        // debugger
         if (e.charCode === 13){
             this.searchButton.click()
         }
@@ -39,11 +38,15 @@ class NavMain extends React.Component{
     }
 
     render(){
-        // console.log(this.props)
+        const {cartItems} = this.props
         const categoryOptions = this.props.categories.map(category=>(
             <option key={category.id} value={category.name}>{category.name[0].toUpperCase() + category.name.slice(1)}</option>
         ))
         categoryOptions.unshift(<option key={-10} value="All Departments">All Departments</option>)
+        let cartQuantity = 0
+        cartItems.forEach((cartItem) => {
+            cartQuantity += cartItem.quantity
+        })
 
         return(
                 <div className="nav-main">
@@ -78,7 +81,11 @@ class NavMain extends React.Component{
                                 <p>Logout</p>
                             </div>
                             <Link to="/cart" className="nav-main-item">
-                                <p id="cart-quantity">{this.props.cartItems.length}</p>
+                                {cartQuantity < 100 ?
+                                    <p className="cart-quantity">{cartQuantity}</p>
+                                :
+                                    <p className="cart-quantity cart-quantity-small">99+</p>
+                                }
                                 <img id="cart-img" src={window.cartImgURL} alt="cart" />
                             </Link>
                         </div>

@@ -12,11 +12,11 @@ export const fetchCartItem = (cartItemId) => (
     })
 )
 
-export const createCartItem = (cartItem) => (
+export const createCartItem = (product_id, qty) => (
     $.ajax({
         url: "/api/cart_items",
         method: "POST",
-        data: {cartItem}
+        data: {product_id, qty}
     })
 )
 
@@ -24,7 +24,7 @@ export const updateCartItem = (cartItem) => (
     $.ajax({
         url: `/api/cart_items/${cartItem.id}`,
         method: "PATCH",
-        data: {cartItem}
+        data: {cart_item: cartItem}
     })
 )
 

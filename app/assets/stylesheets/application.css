@@ -11,12 +11,11 @@
  * It is generally better to create a new file per style scope.
  *
  *
+ *= require_self
+ *= require main.scss
  *= require session_page.scss
  *= require products.scss
  *= require image-slideshow.scss
- *= require reset.scss
  *= require nav.scss
- *= require main.scss
- *= require_tree .
- *= require_self
+ *= require cart.scss
  */

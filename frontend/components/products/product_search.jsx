@@ -53,7 +53,6 @@ export default withRouter(ProductSearch)
     //     const searchFilter = queryString.parse(this.props.location.search)
     //     console.log("CCCCCC")
     //     if (this.props.location !== prevProps.location) {
-    //         debugger
     //         console.log("BBBBBB")
     //         this.props.requestProducts(this.props.bounds.category, this.props.bounds.searchText)
 

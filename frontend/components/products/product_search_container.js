@@ -12,7 +12,6 @@ const mSTP = (state={}, ownProps) => {
     const bounds = queryString.parse(ownProps.location.search)
     let searchText = bounds.searchText ? bounds.searchText : "-1"
     let category = bounds.category ? bounds.category : 'All Departments'
-    // debugger
     return {
         bounds: state.ui.filters.bounds,
         products: Object.values(state.entities.products),
@@ -28,7 +27,6 @@ const mSTP = (state={}, ownProps) => {
 //     // let searchText = searchFilters.searchText ? searchFilters.searchText : "-1"
 //     // let category = searchFilters.category ? searchFilters.category : 'All Departments'
     
-//     debugger
 //     return {
 //         bounds: state.ui.filters.bounds,
 //         products: Object.values(state.entities.products),
