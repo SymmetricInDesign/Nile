@@ -33,7 +33,7 @@ class CartItem extends React.Component{
                     <Link to={`/products/${product.id}`}><img className="cart-img" src={product.photoUrls[0]} alt={product.name} /></Link>
                 </div>
                 <div className="cart-item-info">
-                    <Link to={`/products/${product.id}`}><h2>{product.name}</h2></Link>
+                    <Link to={`/products/${product.id}`}><span className="title">{product.name}</span></Link>
                     <p className="in-stock">In Stock</p>
                     <p className="returns"></p>
                     <p className="price">{product.price}</p>

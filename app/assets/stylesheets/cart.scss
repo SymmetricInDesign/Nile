@@ -38,14 +38,9 @@
     }
     a{
         text-decoration: none;
+        width: fit-content;
     }
-    h2{
-        color: black;
-        text-decoration: none;
-        &:hover{
-            text-decoration: underline rgba(199, 2, 2, 0.37);
-        }
-    }
+
 }
 
 .cart-items-header{
@@ -113,6 +108,16 @@
             font-weight: 700;
             right: 10px;
             top: 10px;
+        }
+        .title{
+            display: inline-block;
+            font-weight: 700;
+            font-size: 22px;
+            margin-top: 15px;
+            color: black;
+            &:hover{
+                text-decoration: underline rgba(199, 2, 2, 0.37);
+            }
         }
         .delete-link{
             display: inline-block;
