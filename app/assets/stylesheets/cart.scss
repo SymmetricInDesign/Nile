@@ -79,11 +79,14 @@
         text-align: left;
     }
     button{
-        background-color: #f8d215;
         border: none;
         border-radius: 7px;
         height: 29px;
-        width: 100%
+        width: 100%;
+        background-color: #f8d215;
+        &:hover{
+            background-color: #f0ca10;
+        }
     }
 }
 

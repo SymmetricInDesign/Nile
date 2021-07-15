@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from 'react-router-dom'
 class ProductShowOrderSection extends React.Component{
     constructor(props){
         super(props)
@@ -23,7 +24,7 @@ class ProductShowOrderSection extends React.Component{
                 <h3>FREE Delivery</h3>
                 <h2 className="information-text">In Stock</h2>
                 {this.props.itemInCart ?
-                    <h3>Item is already in Cart</h3>
+                    <h3>Item is already in your <Link to="/cart">Cart</Link></h3>
                 :
                     <>
                         <div className="qty-select-container">
