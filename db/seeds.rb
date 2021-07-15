@@ -66,13 +66,15 @@ product5 = Product.find_or_create_by(category_id: cat1.id, name: "table", detail
 if !product5.photos.attached?
     product5.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/05-table_1.jpg'), filename: '05-table_1.jpg')
 end
-product6 = Product.find_or_create_by(category_id: cat1.id, name: "couch", details: '<ul>
+product6 = Product.find_or_create_by(category_id: cat1.id, name: "couch", details: 
+'<ul>
     <li>MICROFIBER SUEDE UPHOLSTERY SOFA: Configurable feature with reversible chaise ottoman setup for stylish living room setting in small or large family living room spaces</li>
     <li>STURDY HARDWOOD FRAME: Upholstered in plush microfiber fabrics. 100% Polyester Microfiber Fabric comes with detachable cushions for easy washing & cleaning</li>
     <li>MODERN BUTTON TUFTED DESIGN: detailed accents on both cushions and ottoman/coffee table</li>
     <li>HARDWARE & MANUAL INCLUDED: easily packed together (concealed underneath sofa dust cover when shipped)</li>
     <li>ASSEMBLY REQUIRED: Comes in complete package to put together Comes in a few boxes</li>
-</ul>', price: 181.99)
+</ul>', 
+price: 181.99)
 if !product6.photos.attached?
     product6.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/06-couch_1.jpg'), filename: '06-couch_1.jpg')
 end

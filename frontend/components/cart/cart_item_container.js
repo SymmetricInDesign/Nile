@@ -1,6 +1,6 @@
 import {connect} from "react-redux"
 import { withRouter } from "react-router"
-import { removeCartItem, updateCartItem } from "../../actions/cart_actions"
+import { deleteCartItem, updateCartItem } from "../../actions/cart_actions"
 import CartItem from "./cart_item"
 
 const mSTP = (state={}, ownProps) => {
@@ -11,7 +11,7 @@ const mSTP = (state={}, ownProps) => {
 }
 
 const mDTP = dispatch => ({
-        removeCartItem: (cartItemId) => dispatch(removeCartItem(cartItemId)),
+        removeCartItem: (cartItemId) => dispatch(deleteCartItem(cartItemId)),
         updateCartItem: (cartItem) => dispatch(updateCartItem(cartItem)),
 })
 

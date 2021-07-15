@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductShowOrderSection from './product_show_order'
+import ReviewsContainer from "../reviews/reviews_container"
 class ProductShow extends React.Component{
     constructor(props){
         super(props)
@@ -87,7 +88,7 @@ class ProductShow extends React.Component{
                             </h2>
                             <hr />
                             <h2>About this item</h2>
-                            <div dangerouslySetInnerHTML={{ __html: product.details }} />
+                            <div className="product-description" dangerouslySetInnerHTML={{ __html: product.details }} />
                         </div>
                         <ProductShowOrderSection 
                             product={product}
@@ -97,6 +98,7 @@ class ProductShow extends React.Component{
                         />
                     </div>
                     <hr />
+                    <ReviewsContainer/>
                 </div>
             )
             

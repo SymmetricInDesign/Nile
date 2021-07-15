@@ -1,7 +1,7 @@
 
 import {connect} from "react-redux"
 import { withRouter } from "react-router"
-import { removeCartItem, fetchCartItems } from "../../actions/cart_actions"
+import { deleteCartItem, fetchCartItems } from "../../actions/cart_actions"
 import { fetchProducts } from "../../actions/product_actions"
 import Cart from "./cart"
 const queryString = require('query-string')
@@ -20,7 +20,7 @@ const mSTP = (state={}, ownProps) => {
 
 const mDTP = dispatch => ({
         requestCartItems: () => dispatch(fetchCartItems()),
-        removeCartItem: (cartItemId) => dispatch(removeCartItem(cartItemId)),
+        removeCartItem: (cartItemId) => dispatch(deleteCartItem(cartItemId)),
         updateCartItem: (cartItem) => dispatch(updateCartItem(cartItem)),
         requestProducts: () => dispatch(fetchProducts())
 })
