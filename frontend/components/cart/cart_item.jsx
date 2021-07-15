@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 class CartItem extends React.Component{
     constructor(props){
@@ -29,17 +30,21 @@ class CartItem extends React.Component{
         return(
             <div className='cart-item-div'>
                 <div className="cart-img-container">
-                    <img className="cart-img" src={product.photoUrls[0]} alt={product.name} />
+                    <Link to={`/products/${product.id}`}><img className="cart-img" src={product.photoUrls[0]} alt={product.name} /></Link>
                 </div>
                 <div className="cart-item-info">
-                    <h2>{product.name}</h2>
+                    <Link to={`/products/${product.id}`}><h2>{product.name}</h2></Link>
                     <p className="in-stock">In Stock</p>
                     <p className="returns"></p>
+                    <p className="price">{product.price}</p>
                     <div className="qty-select-container">
                         <p>Qty: </p>
                         <select className="qty-select-container" defaultValue={cartItem.quantity} onChange={this.updateQty}>
                             {qtyOptions}
                         </select>
+                        <p className="delete-link" onClick={()=>this.props.removeCartItem(cartItem.id)}>
+                            Delete
+                        </p>
                     </div>
                     
                 </div>

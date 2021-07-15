@@ -1,12 +1,12 @@
 header{
     width: 100%;
-    height: 15%;
+    height: 13vh;
     min-width: 1130px;
 }
 
 .nav-bar{
     width: 100%;
-    height: 100px;
+    height: 100%;
 }
 
 .nav-bar p {
@@ -208,7 +208,6 @@ header{
     display: block
 }
 
-
 #logo{
     padding: 0;
     width: 170px;
@@ -221,7 +220,7 @@ header{
     padding-left: 0;
 }
 
-.cart-quantity{
+p.cart-quantity{
     position: absolute;
     color: #e28408;
     font-weight: 900;
@@ -229,6 +228,6 @@ header{
     transform: translate(-13px, -10px)
 }
 
-.cart-quantity-small{
+p.cart-quantity-small{
     font-size: 14px;
 }
