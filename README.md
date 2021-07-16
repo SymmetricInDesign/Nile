@@ -6,7 +6,7 @@ Nile uses the power of React and Redux to deliver a fast and smooth user experie
 
 ![Nile](https://github.com/SymmetricInDesign/Nile/blob/main/Screenshot%202021-07-16%20093612.png "Nile")
 
-###Visitors can:
+### User can:
 * Browse products
 * Search for products based on keywords and/or categories
 * View details, images, and reviews for a product
