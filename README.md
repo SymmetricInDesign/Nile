@@ -16,7 +16,7 @@ Nile uses the power of React and Redux to deliver a fast and smooth user experie
 
 # Technologies
 ### Frontend
-#### Languages
+* #### Languages
 * JavaScript 
 * HTML 
 * CSS
