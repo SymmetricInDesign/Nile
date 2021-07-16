@@ -22,9 +22,9 @@ Nile uses the power of React and Redux to deliver a fast and smooth user experie
 * CSS
 ### Libraries and Utilities
 * React
-** Jsx, React-Router
+   * Jsx, React-Router
 * Redux
-** 
+   * 
 * SCSS
 * Babel
 * Webpack
