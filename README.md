@@ -42,25 +42,3 @@ Nile uses the power of React and Redux to deliver a fast and smooth user experie
    * S3 - Used with rails ActiveStorage for images
 * Heroku - live hosting
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-asdasd
-* ...
