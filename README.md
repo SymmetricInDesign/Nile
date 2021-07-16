@@ -1,11 +1,18 @@
 # README
 
-[Live Site](https://nile-fullstack.herokuapp.com/#/) is a single-page, full-stack web application built to mimic the style of [Amazon](https://www.amazon.com/)
+[Live Site](https://nile-fullstack.herokuapp.com/#/) is a single-page, full-stack web application built to mimic the style of [Amazon](https://www.amazon.com/).
 
+Nile uses the power of React and Redux to deliver a fast and smooth user experience.
 
 ![Nile](https://github.com/SymmetricInDesign/Nile/blob/main/Screenshot%202021-07-16%20093612.png "Nile")
 
-
+###Visitors can:
+* Browse products
+* Search for products based on keywords and/or categories
+* View details, images, and reviews for a product
+* Write, update, and delete their own reviews
+* Add products to a shopping cart
+* Update and delete cart items
 
 
 This README would normally document whatever steps are necessary to get the
