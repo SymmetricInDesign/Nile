@@ -1,6 +1,6 @@
 # README
 
-[Live Site](https://nile-fullstack.herokuapp.com/#/)
+[Live Site](https://nile-fullstack.herokuapp.com/#/) is a single-page, full-stack web application built to mimic the style of [Amazon](amazon.com)
 
 
 ![Nile](https://github.com/SymmetricInDesign/Nile/blob/main/Screenshot%202021-07-16%20093612.png "Nile")
