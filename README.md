@@ -21,13 +21,26 @@ Nile uses the power of React and Redux to deliver a fast and smooth user experie
 * HTML 
 * CSS
 ### Libraries and Utilities
-* React
-   * Jsx, React-router
-* Redux
-   * Thunk, Redux-logger
+* React - Dynamic html and single-page routing simulation
+   * Jsx, React Router
+* Redux - Frontend state management
+   * Thunk, Redux Logger
 * SCSS
 * Babel
 * Webpack
+
+## Backend
+### Language
+* Ruby
+### Frameworks and Utilities
+* Rails
+   * ActiveRecord - Rails library for object-oriented database manipulation and retrieval
+   * ActiveStorage - Used to store images and relate them to product data
+   * Jbuilder - Formatting JSON Api responses
+* PostgreSQL
+* AWS
+   * S3 - Used with rails ActiveStorage for images
+* Heroku - live hosting
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
