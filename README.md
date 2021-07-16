@@ -6,7 +6,7 @@ Nile uses the power of React and Redux to deliver a fast and smooth user experie
 
 ![Nile](https://github.com/SymmetricInDesign/Nile/blob/main/Screenshot%202021-07-16%20093612.png "Nile")
 
-### Users can:
+## Users can:
 * Browse products
 * Search for products based on keywords and/or categories
 * View details, images, and reviews for a product
@@ -14,6 +14,20 @@ Nile uses the power of React and Redux to deliver a fast and smooth user experie
 * Add products to a shopping cart
 * Update and delete cart items
 
+# Technologies
+## Frontend
+### Languages
+* JavaScript 
+* HTML 
+* CSS
+### Libraries and Utilities
+* React
+** Jsx, React-Router
+* Redux
+** 
+* SCSS
+* Babel
+* Webpack
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
