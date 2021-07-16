@@ -8,7 +8,7 @@ const mSTP = (state={}, ownProps) => {
     return {
         product: ownProps.product,
         reviews: Object.values(state.entities.reviews),
-        currentUserId: state.session.id
+        currentUserId: state.session.id,
     }
 }
 

@@ -96,13 +96,14 @@ class ProductShow extends React.Component{
                             qtyOptions = {qtyOptions}
                             itemInCart={this.props.itemInCart}
                             createCartItem={this.props.createCartItem}
+                            loggedIn={this.props.loggedIn}
                         />
                     </div>
                     <hr />
-                    {/* <div className="reviews-section-container">
-                        <NewReviewFormContainer product={product}/>
+                    <div className="reviews-section-container">
+                        {this.props.loggedIn ? <NewReviewFormContainer product={product}/> : null}
                         <ReviewsContainer product={product}/>
-                    </div> */}
+                    </div>
                 </div>
             )
             

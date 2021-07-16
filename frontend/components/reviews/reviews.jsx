@@ -17,6 +17,8 @@ class Reviews extends React.Component{
                 <Review 
                     key={review.id}
                     review={review}
+                    currentUserId={this.props.currentUserId}
+                    deleteReview={this.props.deleteReview}
                 />
             ))
             return(

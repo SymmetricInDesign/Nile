@@ -50,11 +50,12 @@ class NewReviewForm extends React.Component{
         return(
             <div className="review-form">
                 <div className="rating-container">
+                    <span>Rating: </span>
                     {radioButtons}
                 </div>
                 <input type="text" placeholder="Title"  className="title" onChange={this.updateTitle}/>
                 <textarea placeholder="Body" className="body" onChange={this.updateBody} ></textarea>
-                <button className="edit-button" onClick={this.handleSubmit}>Submit Review</button>
+                <button className="form-button edit-button" onClick={this.handleSubmit}>Submit Review</button>
             </div>
         )
     }

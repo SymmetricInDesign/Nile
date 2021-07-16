@@ -15,6 +15,7 @@ const mSTP = (state={}, ownProps) => {
     return {
         product,
         itemInCart,
+        loggedIn: Boolean(state.session.id != null)
     }
 }
 

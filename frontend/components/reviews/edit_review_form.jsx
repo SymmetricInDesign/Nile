@@ -52,13 +52,13 @@ class EditReviewForm extends React.Component{
         return(
             <div className="review-form">
                 <div className="rating-container">
-
+                    <span>Rating: </span>
                     {radioButtons}
                 </div>
                 <input type="text" placeholder="Title" className="title" value={this.state.title} onChange={this.updateTitle}/>
                 {/* <input type="text" placeholder="Body" className="body" value={this.state.body} onChange={this.updateBody}/> */}
                 <textarea placeholder="Body" className="body" onChange={this.updateBody} defaultValue={this.state.body}></textarea>
-                <button className="edit-button" onClick={this.handleSubmit}>Submit Edit</button>
+                <button className="form-button edit-button" onClick={this.handleSubmit}>Submit Edit</button>
             </div>
         )
     }
