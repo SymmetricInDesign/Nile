@@ -8,9 +8,10 @@ import SignupFormContainer from "./session/signup_form_container"
 import CartContainer from './cart/cart_container'
 import {Switch, Route, withRouter} from 'react-router-dom'
 import Header from './header'
+import Footer from './footer'
 
 
-const App = () => (
+const App = (props) => (
   <div className="app">
 
     <Switch>
@@ -18,14 +19,20 @@ const App = () => (
         <AuthRoute path="/signup" component={SignupFormContainer}/>
         <Route path="/" component={Header}></Route>
     </Switch>
+
     <Switch>
       <Route path="/products/search" component={ProductSearchContainer} />
       <Route exact path="/products/:productId" component={ProductShowContainer} />
       <ProtectedRoute exact path="/cart" component={CartContainer} />
-      <Route path="/" component={ProductIndexContainer} />
+      <Route exact path="/" component={ProductIndexContainer} />
     </Switch>
-    
 
+    {/* { props.location.pathname == "/login" || props.location.pathname == "/signup" ? 
+      null
+      :
+      <Route path="/" component={Footer}></Route>
+    } */}
+    
   </div>
 );
 

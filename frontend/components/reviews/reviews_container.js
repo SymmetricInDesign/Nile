@@ -6,12 +6,14 @@ const queryString = require('query-string')
 
 const mSTP = (state={}, ownProps) => {
     return {
-        reviews: Object.values(state.entities.reviews)
+        product: ownProps.product,
+        reviews: Object.values(state.entities.reviews),
+        currentUserId: state.session.id
     }
 }
 
 const mDTP = dispatch => ({
-        requestReviews: () => dispatch(fetchReviews()),
+        requestReviews: (productId) => dispatch(fetchReviews(productId)),
         deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
         updateReview: (review) => dispatch(updateReview(review)),
 })

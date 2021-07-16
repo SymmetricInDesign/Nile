@@ -4,32 +4,32 @@ export const RECEIVE_REVIEW = "RECEIVE_REVIEW"
 export const REMOVE_REVIEW = "REMOVE_REVIEW"
 
 
-export const receiveCartItems = (reviews) => ({
+export const receiveReviews = (reviews) => ({
     type: RECEIVE_REVIEWS,
     reviews: reviews
 })
 
-export const receivereview = (review) => {
+export const receiveReview = (review) => {
     return {
         type: RECEIVE_REVIEW,
         review: review
     }
 }
-export const removereview = (reviewId) => ({
+export const removeReview = (reviewId) => ({
     type: REMOVE_REVIEW,
     reviewId: reviewId
 })
 
-export const fetchReviews = () => dispatch => (
-    ReviewApiUtil.fetchReviews().then(reviews => dispatch(receiveReviews(reviews)))
+export const fetchReviews = (productId) => dispatch => (
+    ReviewApiUtil.fetchReviews(productId).then(reviews => dispatch(receiveReviews(reviews)))
 )
 
 export const fetchReview = (reviewId) => dispatch => (
     ReviewApiUtil.fetchReview(reviewId).then(review => dispatch(receiveReview(review)))
 )
 
-export const createReview = (productId, qty) => dispatch => (
-    ReviewApiUtil.createReview(productId, qty).then(review => dispatch(receiveReview(review)))
+export const createReview = (review) => dispatch => (
+    ReviewApiUtil.createReview(review).then(review => dispatch(receiveReview(review)))
 )
 
 export const updateReview = (review) => dispatch => (

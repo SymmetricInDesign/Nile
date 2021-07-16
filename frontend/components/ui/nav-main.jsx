@@ -100,34 +100,6 @@ class NavMain extends React.Component{
         )
     }
 }
-// handleSearch(e){
-//     e.preventDefault()
-    // let searchTerm
-    // searchTerm = this.state.searchText == ''
-    //     ? -1
-    //     : this.state.searchText;
-    // const bounds = {
-    //     searchText: searchTerm,
-    //     category: this.state.category
-    // }
-    // this.props.updateBounds(bounds)
-    // this.props.requestProducts(this.state.category, searchTerm)
-    // this.props.history.push({
-    //     pathname: '/products',
-    //     state: { searchTerm: searchTerm,
-    //     category: this.state.category }
-    // });
-// }
-
-
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.location.search !== prevProps.location.search) {
-    //       console.log("from nav-main")
-    //       console.log(prevProps)
-    //       console.log(this.props)
-    //       this.props.requestProducts(this.state.category, this.state.searchText)
-    //     }
-    // }
 
 export default withRouter(NavMain)
 

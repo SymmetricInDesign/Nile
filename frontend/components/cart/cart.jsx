@@ -46,7 +46,6 @@ class Cart extends React.Component{
                     cartItem={cartItem}
                 />
             ))
-            console.log(cartItemProducts)
             return (
                 <div className="cart-container">
                     <div className="cart-items-container">

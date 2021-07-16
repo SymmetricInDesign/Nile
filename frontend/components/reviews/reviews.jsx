@@ -7,22 +7,22 @@ class Reviews extends React.Component{
 
 
     componentDidMount(){
-        this.props.requestReviews()
+        this.props.requestReviews(this.props.product.id)
     }
 
     render(){
         const {reviews} = this.props
         if (reviews && reviews.length > 0 && reviews[0]){
             const reviewDivs = reviews.map(review=>(
-                <Review key={review.id}/>
+                <Review 
+                    key={review.id}
+                    review={review}
+                />
             ))
             return(
-                <div className="reviews-section-container">
-                    <input type="text" value="leave a review"/>
                     <div className="reviews-container">
                         {reviewDivs}
                     </div>
-                </div>
             )
         }else{
             return (

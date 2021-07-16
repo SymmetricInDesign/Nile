@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductShowOrderSection from './product_show_order'
 import ReviewsContainer from "../reviews/reviews_container"
+import NewReviewFormContainer from '../reviews/new_review_form_container'
 class ProductShow extends React.Component{
     constructor(props){
         super(props)
@@ -98,7 +99,10 @@ class ProductShow extends React.Component{
                         />
                     </div>
                     <hr />
-                    <ReviewsContainer/>
+                    {/* <div className="reviews-section-container">
+                        <NewReviewFormContainer product={product}/>
+                        <ReviewsContainer product={product}/>
+                    </div> */}
                 </div>
             )
             
