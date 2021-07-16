@@ -27,14 +27,20 @@ class ProductShowOrderSection extends React.Component{
                     <h3>Item is already in your <Link to="/cart">Cart</Link></h3>
                 :
                     <>
-                        <div className="qty-select-container">
-                            <p>Qty: </p>
-                            <select name="quantity" className="qty-select" onChange={this.updateQty}>
-                                {qtyOptions}
-                            </select>
-                        </div>
-                        <button className='order-button' onClick={() => this.props.createCartItem(product.id, this.state.qty)}>Add to Cart</button>
-                        <button className='order-button'>Buy Now</button>
+                        {this.props.loggedIn ?
+                        <>
+                            <div className="qty-select-container">
+                                <p>Qty: </p>
+                                <select name="quantity" className="qty-select" onChange={this.updateQty}>
+                                    {qtyOptions}
+                                </select>
+                            </div>
+                            <button className='order-button' onClick={() => this.props.createCartItem(product.id, this.state.qty)}>Add to Cart</button>
+                            <button className='order-button'>Buy Now</button>
+                        </>
+                        :
+                            <p>Log In to purchase</p>
+                        }
                     </>
                 }
              </div>
