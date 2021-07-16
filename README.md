@@ -31,14 +31,14 @@ Nile uses the power of React and Redux to deliver a fast and smooth user experie
 
 ### Backend
 * #### Language
- * Ruby
+  * Ruby
 * #### Frameworks and Utilities
- * Rails
-    * ActiveRecord - Rails library for object-oriented database manipulation and retrieval
-    * ActiveStorage - Used to store images and relate them to product data
-    * Jbuilder - Formatting JSON Api responses
- * PostgreSQL
- * AWS
-    * S3 - Used with rails ActiveStorage for images
- * Heroku - live hosting
+  * Rails
+     * ActiveRecord - Rails library for object-oriented database manipulation and retrieval
+     * ActiveStorage - Used to store images and relate them to product data
+     * Jbuilder - Formatting JSON Api responses
+  * PostgreSQL
+  * AWS
+     * S3 - Used with rails ActiveStorage for images
+  * Heroku - live hosting
 
