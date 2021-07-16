@@ -15,12 +15,12 @@ Nile uses the power of React and Redux to deliver a fast and smooth user experie
 * Update and delete cart items
 
 # Technologies
-## Frontend
-### Languages
+### Frontend
+#### Languages
 * JavaScript 
 * HTML 
 * CSS
-### Libraries and Utilities
+#### Libraries and Utilities
 * React - Dynamic html and single-page routing simulation
    * Jsx, React Router
 * Redux - Frontend state management
@@ -29,10 +29,10 @@ Nile uses the power of React and Redux to deliver a fast and smooth user experie
 * Babel
 * Webpack
 
-## Backend
-### Language
+### Backend
+#### Language
 * Ruby
-### Frameworks and Utilities
+#### Frameworks and Utilities
 * Rails
    * ActiveRecord - Rails library for object-oriented database manipulation and retrieval
    * ActiveStorage - Used to store images and relate them to product data
