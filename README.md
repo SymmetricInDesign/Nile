@@ -17,17 +17,17 @@ Nile uses the power of React and Redux to deliver a fast and smooth user experie
 # Technologies
 ### Frontend
 * #### Languages
-* JavaScript 
-* HTML 
-* CSS
-#### Libraries and Utilities
-* React - Dynamic html and single-page routing simulation
-   * Jsx, React Router
-* Redux - Frontend state management
-   * Thunk, Redux Logger
-* SCSS
-* Babel
-* Webpack
+  * JavaScript 
+  * HTML 
+  * CSS
+* #### Libraries and Utilities
+  * React - Dynamic html and single-page routing simulation
+     * Jsx, React Router
+  * Redux - Frontend state management
+     * Thunk, Redux Logger
+  * SCSS
+  * Babel
+  * Webpack
 
 ### Backend
 #### Language
