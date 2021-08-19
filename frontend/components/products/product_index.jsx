@@ -3,8 +3,6 @@ import ProductIndexItem from './product_index_item'
 class ProductIndex extends React.Component{
 
     componentDidMount(){
-        // debugger
-        // console.log(this.props)
         this.props.requestProducts()
     }
 
@@ -15,9 +13,9 @@ class ProductIndex extends React.Component{
         return(
             <div className="product-index">
                 {productDivs}
+                <p id="img-src-credit">Photo by <a href="https://unsplash.com/@rhfhanssen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ruben Hanssen</a> on <a href="https://unsplash.com/s/photos/nile?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
             </div>
         )
-    }
-}
+    } }
 
 export default ProductIndex

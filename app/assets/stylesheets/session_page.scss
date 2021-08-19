@@ -8,6 +8,11 @@
     align-items: center;
     flex-direction: column;
     margin-top: 30px;
+    hr {
+        border: 0;
+        height: 2px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(197, 195, 195, 0.75), rgba(0, 0, 0, 0));
+    }
 }
 
 .session-logo img{
@@ -41,27 +46,14 @@
             align-self: baseline;
             padding-left: 10px;
         }
-        button{
-            background-color: #f0c14b;
-            border: 1px solid #a88835;
-            background: linear-gradient(180deg, rgb(236, 214, 158) 0%, rgb(247, 212, 125) 35%, rgb(236, 186, 58) 100%);
-            border-radius: 2px;
-            margin-top: 15px;
-            width: 95.5%;
-            height: 32px;
-            cursor: pointer;
-            &:last-of-type{
-                width: 60%;
-                height: 27px;
-            }
-        }
-        button:hover{
-            background: linear-gradient(180deg, rgb(231, 201, 126) 0%, rgb(236, 199, 105) 35%, rgb(238, 182, 42) 100%);
+        .demo-button{
+            width: 60%;
+            height: 27px;
         }
         input{
             border: 1px solid rgb(173, 172, 172);
             border-radius: 2px;
-            height: 25px;
+            height: 32px;
             width: 90%;
             background-color: white;
             padding: 0 8px;
@@ -72,8 +64,6 @@
 .login-modal{
     height: 310px;
 }
-
-
 
 .auth-header{
     text-align: left;
@@ -119,11 +109,7 @@
     }
 }
 
-hr {
-    border: 0;
-    height: 2px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(197, 195, 195, 0.75), rgba(0, 0, 0, 0));
-}
+
 
 .signup-hr{
     width: 35%;

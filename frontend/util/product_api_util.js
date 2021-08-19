@@ -1,9 +1,16 @@
-export const fetchProducts = () => (
-    $.ajax({
+export const All_DEPARTMENTS = 'All Departments'
+
+export const fetchProducts = (category=All_DEPARTMENTS, searchText=-1) => {
+    return $.ajax({
         url: "/api/products",
-        method: "GET"
+        method: "GET",
+        data: {
+            category: category,
+            searchText: searchText
+        }
     })
-)
+}
+
 
 export const fetchProduct = (productId) => (
     $.ajax({

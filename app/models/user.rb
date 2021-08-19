@@ -3,6 +3,14 @@ class User < ApplicationRecord
     validates :password, allow_nil: true, length: { minimum: 8 }
     validates :session_token, :password_digest, presence: true
 
+    has_many :authored_reviews,
+      foreign_key: :author_id,
+      class_name: :Review 
+
+    has_many :cart_items,
+      foreign_key: :user_id,
+      class_name: :CartItem
+
     attr_reader :password
     after_initialize :ensure_session_token
 

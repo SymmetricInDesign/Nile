@@ -5,7 +5,6 @@ class Api::UsersController < ApplicationController
             login!(@user)
             render json: @user
         else
-#           p @user.errors.full_messages
             render json: @user.errors.full_messages, status: 422
         end
     end
@@ -15,7 +14,6 @@ class Api::UsersController < ApplicationController
         if @user
             render :show
         else
-            #TODO: Add error messages to views
             flash[:errors] = ["user not found."]
             redirect_to :root
         end
@@ -34,7 +32,6 @@ class Api::UsersController < ApplicationController
     private
 
     def user_params
-        # puts params
         params.require(:user).permit(:username, :email, :password)
     end
 end

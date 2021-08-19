@@ -1,11 +1,11 @@
 class Api::ProductsController < ApplicationController
     def index
-        @products = Product.all
+        @products = Product.filter(params[:category], params[:searchText])
         render :index
     end
-
+    
     def show
-        # puts params
-        @product = Product.find_by(id: params[:id])
+        @product = Product.with_attached_photos.find_by(id: params[:id])
+        render :show
     end
 end
