@@ -34,14 +34,8 @@ class NewReviewForm extends React.Component{
         this.props.createReview(this.state)     
     }
 
-
-    componentDidMount(){
-        
-    }
-
     render(){
         let radioButtons = []
-        console.log(this.state)
         for (let i=1; i<6; i++){
                 radioButtons.push(<input key={i} type="radio" className="rating-radio" 
                 checked={this.state.rating === i} id={`rating-${i}`} 

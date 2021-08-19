@@ -12,11 +12,6 @@ class Review extends React.Component{
         this.setState({editing: false})
     }
 
-
-    componentDidMount(){
-        
-    }
-
     render(){
         const {review} = this.props
         if (!this.state.editing){
