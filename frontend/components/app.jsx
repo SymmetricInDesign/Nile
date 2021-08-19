@@ -25,14 +25,7 @@ const App = (props) => (
       <Route exact path="/products/:productId" component={ProductShowContainer} />
       <ProtectedRoute exact path="/cart" component={CartContainer} />
       <Route exact path="/" component={ProductIndexContainer} />
-    </Switch>
-
-    {/* { props.location.pathname == "/login" || props.location.pathname == "/signup" ? 
-      null
-      :
-      <Route path="/" component={Footer}></Route>
-    } */}
-    
+    </Switch>   
   </div>
 );
 
