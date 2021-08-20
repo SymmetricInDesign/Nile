@@ -39,11 +39,14 @@ class NavMain extends React.Component{
 
     render(){
         const {cartItems} = this.props
+
         const categoryOptions = this.props.categories.map(category=>(
             <option key={category.id} value={category.name}>{category.name[0].toUpperCase() + category.name.slice(1)}</option>
         ))
+
         categoryOptions.unshift(<option key={-10} value="All Departments">All Departments</option>)
         let cartQuantity = 0
+        
         cartItems.forEach((cartItem) => {
             cartQuantity += cartItem.quantity
         })

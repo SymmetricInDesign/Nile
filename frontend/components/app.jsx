@@ -10,14 +10,16 @@ import {Switch, Route, withRouter} from 'react-router-dom'
 import Header from './header'
 import Footer from './footer'
 
-
+const exclusionArray = [
+  '#/login',
+  '#/signup',
+]
 const App = (props) => (
   <div className="app">
-
+    {exclusionArray.indexOf(location.hash) < 0 && <Header/>}
     <Switch>
         <AuthRoute path="/login" component={LoginFormContainer}/>
         <AuthRoute path="/signup" component={SignupFormContainer}/>
-        <Route path="/" component={Header}></Route>
     </Switch>
 
     <Switch>
@@ -26,6 +28,7 @@ const App = (props) => (
       <ProtectedRoute exact path="/cart" component={CartContainer} />
       <Route exact path="/" component={ProductIndexContainer} />
     </Switch>   
+    {exclusionArray.indexOf(location.hash) < 0 && <Footer/>}
   </div>
 );
 
