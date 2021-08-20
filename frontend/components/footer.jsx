@@ -1,11 +1,10 @@
 import React from 'react'
 const Footer = ()=>(
   <footer>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <a href="https://github.com/SymmetricInDesign" target='_blank' rel="noreferrer"><span class="iconify" data-icon="akar-icons:github-fill"></span></a>
+    <a href='https://www.linkedin.com/in/donnie-wombough-911671218/' target='_blank' rel="noreferrer"><span class="iconify" data-icon="bi:linkedin"></span></a>
+    <a href="https://angel.co/u/donnie-wombough" target='_blank' rel="noreferrer"><span class="iconify" data-icon="cib:angellist"></span></a>
+    <a href="#" target='_blank' rel="noreferrer"><span class="iconify" data-icon="bx:bxs-user"></span></a>
   </footer>
 )
 

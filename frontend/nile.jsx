@@ -13,13 +13,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
         },
         session: { id: window.currentUser.id }
     };
-    store = configureStore(preloadedState);
-    delete window.currentUser;
+        store = configureStore(preloadedState);
+        delete window.currentUser;
     } else {
-    store = configureStore();
+        store = configureStore();
     }
-    
-    window.store = store //TODO: Remove
+
     const root = document.getElementById("root")
     ReactDOM.render(<Root store={store}/>, root)
 })

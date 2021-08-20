@@ -21,8 +21,9 @@ footer{
 }
 
 body{
-    margin: 0
+    margin: 0;
 }
+
 
 button{
     cursor: pointer;
@@ -75,13 +76,14 @@ button{
 }
 
 .form-button{
-    background-color: #f0c14b;
+    background: #f0c14b;
     border: 1px solid #a88835;
     background: linear-gradient(180deg, rgb(236, 214, 158) 0%, rgb(247, 212, 125) 35%, rgb(236, 186, 58) 100%);
     border-radius: 2px;
     margin-top: 15px;
     width: 95.5%;
     height: 32px;
+    transition: background-image 0.3s;
     &:hover{
         background: linear-gradient(180deg, rgb(231, 201, 126) 0%, rgb(236, 199, 105) 35%, rgb(238, 182, 42) 100%);
     }

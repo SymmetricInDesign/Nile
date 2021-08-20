@@ -182,6 +182,9 @@ header{
     justify-content: center;
     cursor: pointer;
     color: black;
+    i{
+        font-size: 20px;
+    }
     &:hover{
         background-color: #f8b155;    
     }
