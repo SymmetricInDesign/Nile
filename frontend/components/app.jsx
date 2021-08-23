@@ -7,8 +7,8 @@ import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container"
 import CartContainer from './cart/cart_container'
 import {Switch, Route, withRouter} from 'react-router-dom'
-import Header from './header'
-import Footer from './footer'
+import Header from './ui/header'
+import Footer from './ui/footer'
 
 const exclusionArray = [
   '#/login',
