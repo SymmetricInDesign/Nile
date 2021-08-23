@@ -17,6 +17,10 @@ class ProductShow extends React.Component{
 
     componentDidMount(){
         this.props.requestProduct(this.props.match.params.productId)
+        this.photos = this.props.product.photoUrls.map((url, index) =>{
+            const img = new Image();
+            img.src = url;
+        });
     }
 
     nextSlide(){

@@ -49,7 +49,7 @@ class EditReviewForm extends React.Component{
                     <span>Rating: </span>
                     {radioButtons}
                 </div>
-                <input type="text" placeholder="Title" className="title" value={this.state.title} onChange={this.updateTitle}/>
+                <input type="text" placeholder="Title" className="review-title" value={this.state.title} onChange={this.updateTitle}/>
                 {/* <input type="text" placeholder="Body" className="body" value={this.state.body} onChange={this.updateBody}/> */}
                 <textarea placeholder="Body" className="body" onChange={this.updateBody} defaultValue={this.state.body}></textarea>
                 <button className="form-button edit-button" onClick={this.handleSubmit}>Submit Edit</button>
