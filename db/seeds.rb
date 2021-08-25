@@ -8,8 +8,8 @@ require 'open-uri'
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Product.destroy_all
-Category.destroy_all
-CartItem.destroy_all
+# Category.destroy_all
+# CartItem.destroy_all
 
 demo_user = User.find_by_credentials('DemoMan', 'demopassword')
 
