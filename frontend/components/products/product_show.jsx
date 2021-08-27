@@ -21,6 +21,7 @@ class ProductShow extends React.Component{
             const img = new Image();
             img.src = url;
         });
+        window.scrollTo(0, 0)
     }
 
     nextSlide(){

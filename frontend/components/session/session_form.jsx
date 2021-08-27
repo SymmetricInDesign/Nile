@@ -18,6 +18,10 @@ class SessionForm extends React.Component {
       this.updateEmail = this.updateEmail.bind(this)
     }
 
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
+
     componentWillUnmount(){
         this.props.receiveErrors([])
     }
