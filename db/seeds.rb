@@ -22,8 +22,7 @@ cat1 = Category.find_or_create_by(name: "Furniture", details: "For all your hous
 cat2 = Category.find_or_create_by(name: "Electronics", details: "Stay Connected. Make your life easier.")
 cat3 = Category.find_or_create_by(name: "Automotive Parts & Accessories", details: "Maintain the thing that gets you from point A to point B.")
 cat4 = Category.find_or_create_by(name: "Appliances", details: "Your friendly everyday machines.")
-cat5 = Category.find_or_create_by(name: "Tools", details: "Tools and home improvement supplies.")
-cat6 = Category.find_or_create_by(name: "Clothing and Shoes", details: "Find your next fashion statememt.")
+cat5 = Category.find_or_create_by(name: "Clothing and Shoes", details: "Find your next fashion statememt.")
 
 product1 = Product.find_or_create_by(
     category_id: cat1.id, 
@@ -221,16 +220,99 @@ if !product11.photos.attached?
     product11.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/11-fridge_1.jpg'), filename: '11-fridge_1.jpg')
 end
 
-# <ul>
-#     <li>3-WAYS TO BREW: Brew up to 12 cups with ground coffee on the carafe side or use dual purpose single serving to brew a pod or ground coffee on the other. The included pod holder and single-serve grounds basket easily handle both options</li>
-#     <li>SINGLE-CUP COFFEE MAKER: Brew a cup with a K-Cup, pod, another pod brand, or ground coffee. The included pod holder and single-serve grounds basket easily handle both options and the cup rest removes so you can brew into a tall travel mug</li>
-#     <li>BREW A FULL POT OF COFFEE: This programmable coffee maker has Easy-Touch programming for wake-up ready coffee. After brewing, coffee stays warm for 2 hours and the power automatically shuts off. Auto Pause & Pour lets you pour a cup as coffee brews</li>
-#     <li>CUSTOMIZE YOUR BREW STRENGTH: Control how strong you want your coffee with Select-a-Brew: regular and bold brewing options</li>
-#     <li>2 SEPARATE EASY-FILL WATER RESERVOIRS: Each brewing side on this Hamilton Beach coffee maker has its own water reservoir that’s easy to fill and feature</li>s a water window, so you always know exactly how much water to add
-# </ul>
+product12 = Product.find_or_create_by(
+    category_id: cat3.id, 
+    name: "NOCO Boost Plus GB40 1000 Amp 12-Volt UltraSafe Lithium Jump Starter Box, Car Battery Booster Pack", 
+    details: 
+            '<ul>
+                <li>Start Dead Batteries - Safely jump start a dead battery in seconds with this compact, yet powerful, 1000-amp portable lithium car battery jump starter pack - up to 20 jump starts on a single charge - and rated for gasoline engines up to 6 liters and diesel engines up to 3 liters.</li>
+                <li>UltraSafe - Safe and easy to use car battery jump starter pack without the worry of incorrect connections or sparks. Safely connect to any 12-volt automotive car battery with our mistake-proof design featuring spark-proof technology and reverse polarity protection.</li>
+                <li>Multi-Function - It\'s a car jump starter, portable power bank, and LED flashlight. Recharge smartphones, tablets, and other USB devices. It\'s easily rechargeable from any powered USB port in 3 hours at 2.1-amps. Plus, an integrated 100-lumen LED flashlight with seven light modes, including emergency strobe and SOS.</li>
+                <li>Advanced Design - Our most advanced portable car battery jump starter ever. Featuring high-discharge lithium technology for safe operation in any climate. A rugged and water-resistant enclosure rated at IP65. A rubberized over-molded casing to prevent scratching or marring of surfaces. And an ultra-compact and lightweight design weighing just 2.4 pounds.</li>
+                <li>In The Box - GB40 UltraSafe Portable Lithium Car Battery Jump Starter Pack, Heavy-Duty Battery Clamps, 12-Volt Car Charger, Micro USB Charging Cable, Microfiber Storage Bag, User Guide, 1-Year Warranty, and Designed in the USA.</li>
+            </ul>', 
+    price: 82.99
+)
+if !product12.photos.attached?
+    product12.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/12-jumpstarter_1.jpg'), filename: '12-jumpstarter_1.jpg')
+end
+
+product13 = Product.find_or_create_by(
+    category_id: cat3.id, 
+    name: "NEIKO 02236A Slide Hammer | 17 Pc Automotive Bearing Hub Puller Kit | Axle Seal Pulling", 
+    details: 
+            '<ul>
+                <li>[APPLICATION]: Easily remove mechanical, press-fit parts (bearings, bushings, gears, pulleys, etc.) from a shaft; Remove shafts from inside a hole without striking the object itself.</li>
+                <li>[QUALITY]: 5-pound steel slide hammer constructed of chrome vanadium steel for smooth operation, improved durability, corrosion resistance.</li>
+                <li>[VERSATILE]: Full hammer kit, ideal for use on a wide variety of pulling applications, including pulling dents; Fits many sizes of bearings, gears and shafts.</li>
+                <li>[PERFECT FOR MECHANICS]: Includes an external 3-jaw puller, internal 3-jaw puller, external 2-jaw puller, internal 2-jaw puller.</li>
+                <li>[INCLUDES]: 5-lb hammer, shank, T-bar assembly, grip wrench adapter, dent puller, pulling (cone) adapter, seal hook in a Hard plastic blow-molded carrying case.</li>
+            </ul>', 
+    price: 59.99
+)
+if !product13.photos.attached?
+    product13.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/13-slidehammer_1.jpg'), filename: '13-slidehammer_1.jpg')
+end
+
+product14 = Product.find_or_create_by(
+    category_id: cat3.id, 
+    name: "Valleycomfy Steering Wheel Cover with Microfiber Leather for Car Truck SUV 15 inch (Black)", 
+    details: 
+            '<ul>
+                <li>Suitable for middle-size steering wheels with diameter 14 1/2 inch to 15 inch(37cm to 39cm)</li>
+                <li>Top Quality: Heavy duty genuine leather steering cover, high quality and soft touch</li>
+                <li>Increased Safety: A better grip on the steering wheel gives you more control on the road.</li>
+                <li>Upgrade your vehicle instantly with this stunning looking, luxury leather steering wheel wrap with sports detailing and put some style in your ride!</li>
+                <li>Inside a 100% odour free and skidproof lining ensures a constant reliable grip.</li>
+            </ul>', 
+    price: 15.99
+)
+if !product14.photos.attached?
+    product14.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/14-wheelcover_1.jpg'), filename: '14-wheelcover_1.jpg')
+end
+
+product15 = Product.find_or_create_by(
+    category_id: cat5.id, 
+    name: "COOFANDY Men's Casual Dress Shirt Button Down Shirts Long-Sleeve Denim Work Shirt", 
+    details: 
+            '<ul>
+                <li>Button closure</li>
+                <li>Hand Wash Only</li>
+                <li>HIGH QUALITY -- Cotton Blend, Long sleeve denim shirt for men, perfect for casual, business, make you look great and handsome</li>
+                <li>TRENDY DESIGN -- Turn down collar, inner contrast design shirts/ solid color shirts / long sleeve button dress shirt for fashion men</li>
+                <li>FASHION DENIM -- Lattice collar and cuffs decoration.3 Types of men\'s button-up shirts for your optional choose.Please carefully choose your size according to our size chart ( Not the Amazon Size Chart )</li>
+                <li>COZY FEELING -- Spread Collar Button down shirts made of soft and lightweight cotton fabric, give you good and comfortable wearing experience. ONLY Type 01 with fake chest pocket,the other shirts with real chest pockets</li>
+                <li>MANY OCCASIONS -- Fashion style button up shirt, regular fit, comfortable to wear, suitable for all seasons and many occasions, such casual, work, or party. A must-have shirt in men\'s wardrobe.</li>
+            </ul>', 
+    price: 25.99
+)
+if !product15.photos.attached?
+    product15.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/15-shirt.jpg'), filename: '15-shirt.jpg')
+end
+
+product16 = Product.find_or_create_by(
+    category_id: cat5.id, 
+    name: "YATHON Women's Vintage Floral Flared A-Line Swing Casual Party Dress with Pockets", 
+    details: 
+            '<ul>
+                <li>COMFORTABLE GREAT QUALITY MATERIAL : 65%Cotton, 35%Polyester. Women\'s dresses is made from lightweight and skin-touch,good quality stretchy fabric which skirt don\'t wrinkle with a nice drape to it. </li>
+                <li>Zipper closure</li>
+                <li>FUNCTIONAL POCKETS AND FASHIONABLE KEYHOLE CUTOUT: This is women\'s vintage swing casual party cocktail dresses. Both sides have nice hidden pockets are great for carry your phone or useful items. Vintage pleated 1950s hepburn style, sexy keyhole cutout add some pizzazz and give the dress personality, also very flattering on the body.</li>
+                <li>HUGS YOUR CURVES FITS PERFECTLY : Women\'s keyhole swing a-line party casual dresses very cute well cut and hugs your curves perfectly. Elegant women\'s wear to work dresses skirts flowing very pretty and accentuates your figure.This women\'s fit and flare summer dresses have a elegant feminine look!</li>
+                <li>VINTAGE AND CLASSY DRESSES UP : This is vintage a line work party wedding guest dresses. Retro women\'s round neck sexy front v a-line dress cut perfect match with a hats, heels/wedges/flip flops, nice earrings necklace, jewelry, make you more feminine.</li>
+                <li>FIT LIKE A GLOVE : The women\'s party cocktail swing business dresses very flattering fit — true to size. Length is knee-length. It is the perfect length to wear out and works well for curvy girls. Good chest coverage and it doesn\'t show too much cleavage. Invisible zipper closure on the back to protect your skin better.</li>
+                <li>FOR ANY OCCASIONS : Classy women\'s retro cocktail fit and flare dresses that could be dressed up or down depending on the occasion. Such as wear business office work, casual, partys, church, beach wedding, wedding guest, prom, cocktail, holiday, honeymoon, cruise, birthdays, dinner, summer evenings, homecoming, choir performance, play, daily life, going out, gifts for mom, mother\'s day gift, mother\'s day dress or special occasions.</li>
+            </ul>', 
+    price: 25.99
+)
+if !product16.photos.attached?
+    product16.photos.attach(io: URI.open('https://nile-seeds.s3.us-east-2.amazonaws.com/Nile_Images/product_images/16-dress.jpg'), filename: '16-dress.jpg')
+end
 
 
-cart_item1 = CartItem.find_or_create_by(user_id: demo_user.id, product_id: product6.id, quantity: 7)
-cart_item2 = CartItem.find_or_create_by(user_id: demo_user.id, product_id: product5.id, quantity: 5)
+
+# cart_item1 = CartItem.find_or_create_by(user_id: demo_user.id, product_id: product6.id, quantity: 7)
+# cart_item2 = CartItem.find_or_create_by(user_id: demo_user.id, product_id: product5.id, quantity: 5)
 
 puts("DB SEEDED")
+

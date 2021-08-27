@@ -26,9 +26,8 @@
     }
     &>h2{
         position: absolute;
-        top: 85px;
+        top: 30px;
         left: 50px;
-
     }
 }
 
@@ -37,7 +36,7 @@
     border: 1px solid lightgray;
     border-radius: 2px;
     background-color: white;
-    padding: 20px 20px;
+    padding: 20px 20px 70px 20px;
     margin: 10px;
     flex-grow: 1;
     height: 400px;
@@ -49,9 +48,19 @@
     flex-direction: column;
     box-shadow: -1px 1px rgb(179, 179, 179);
     align-items: center;
-    p{
-        text-overflow: ellipsis;
+    p.product-title{
         font-weight: 700;
+        font-size: 22px;
+        color: black;
+        text-decoration: none;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        &:hover{
+            color: rgb(73, 73, 73);
+        }
     }
     h2{
         position: absolute;
@@ -69,7 +78,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        text-decoration: none;
         img{
+            transition: opacity 0.3s;
+            &:hover{
+                opacity: 0.7;
+            }
             display: block;
             width: auto;
             height: auto;
