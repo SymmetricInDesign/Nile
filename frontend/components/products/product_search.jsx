@@ -6,6 +6,8 @@ class ProductSearch extends React.Component{
     componentDidMount(){
         const searchFilter = queryString.parse(this.props.location.search)
         this.props.requestProducts(searchFilter.category, searchFilter.searchText)
+        window.scrollTo(0, 0)
+
     }
 
     componentDidUpdate(prevProps) {

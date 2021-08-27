@@ -34,6 +34,8 @@ class Cart extends React.Component{
     componentDidMount(){
         // this.props.requestCartItems()
         this.props.requestProducts()
+        window.scrollTo(0, 0)
+
     }
 
     render(){

@@ -4,6 +4,8 @@ class ProductIndex extends React.Component{
 
     componentDidMount(){
         this.props.requestProducts()
+        window.scrollTo(0, 0)
+
     }
 
     render(){
