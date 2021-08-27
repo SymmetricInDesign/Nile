@@ -67,7 +67,9 @@ class Cart extends React.Component{
             )
         }else{
             return (
-                <h1>No cart items to display</h1>
+                <div className="cart-container">
+                    <h1>No cart items to display</h1>
+                </div>
             )
         }
     }

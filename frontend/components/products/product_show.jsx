@@ -17,11 +17,8 @@ class ProductShow extends React.Component{
 
     componentDidMount(){
         this.props.requestProduct(this.props.match.params.productId)
-        this.photos = this.props.product.photoUrls.map((url, index) =>{
-            const img = new Image();
-            img.src = url;
-        });
         window.scrollTo(0, 0)
+        // console.log("yep")
     }
 
     nextSlide(){
@@ -46,7 +43,10 @@ class ProductShow extends React.Component{
         let product
         if (this.props.product) {
             product = this.props.product
-
+            this.photos = this.props.product.photoUrls.map((url, index) =>{
+                const img = new Image();
+                img.src = url;
+            });
             const images = product.photoUrls.map((url, index) => <img key={index} src={url}/> )
             this.numSlides = images.length
             const imageSlides = images.map((image, index) => (
