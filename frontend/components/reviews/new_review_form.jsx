@@ -48,6 +48,7 @@ class NewReviewForm extends React.Component{
         // }
         return(
             <div className="review-form">
+                <h2>Leave a Review</h2>
                  <div className="rating-container">
                     <div className="rate">
                         <input type="radio" id="star5" name="rate" value="5" onChange={this.updateRating} checked={this.state.rating == 5}/>
