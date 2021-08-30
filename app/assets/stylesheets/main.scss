@@ -4,6 +4,10 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
+*{
+    transition: border 0.3s background-color 0.3s;
+}
+
 .app{
     min-height: 100vh;
 }
