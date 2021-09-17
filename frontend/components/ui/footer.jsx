@@ -4,7 +4,7 @@ const Footer = ()=>(
     <a href="https://github.com/SymmetricInDesign" target='_blank' rel="noreferrer"><span className="iconify" data-icon="akar-icons:github-fill"></span></a>
     <a href='https://www.linkedin.com/in/donnie-wombough-911671218/' target='_blank' rel="noreferrer"><span className="iconify" data-icon="bi:linkedin"></span></a>
     <a href="https://angel.co/u/donnie-wombough" target='_blank' rel="noreferrer"><span className="iconify" data-icon="cib:angellist"></span></a>
-    <a href="#" target='_blank' rel="noreferrer"><span className="iconify" data-icon="bx:bxs-user"></span></a>
+    <a href="http://dwombough.me" target='_blank' rel="noreferrer"><span className="iconify" data-icon="bx:bxs-user"></span></a>
   </footer>
 )
 
