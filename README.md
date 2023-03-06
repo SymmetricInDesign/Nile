@@ -1,6 +1,6 @@
 # README
 
-[Nile](https://nile-fullstack.herokuapp.com/#/) is a single-page, full-stack web application built to mimic the style of [Amazon](https://www.amazon.com/).
+Nile is a single-page, full-stack web application built to mimic the style of [Amazon](https://www.amazon.com/).
 
 Nile uses the power of React and Redux to deliver a fast and smooth user experience.
 
